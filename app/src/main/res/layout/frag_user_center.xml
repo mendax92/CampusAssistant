@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhiqi.campusassistant.ui.user.widget.UserInfoCardView
+            android:id="@+id/user_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin_xs" />
+
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:id="@+id/user_bind_phone"
+            style="@style/MainItem">
+
+            <ImageView
+                android:layout_width="@dimen/user_nav_icon_size"
+                android:layout_height="@dimen/user_nav_icon_size"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_user_account" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_weight="1"
+                android:text="@string/user_nav_account" />
+
+            <TextView
+                android:id="@+id/bind_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_nav_bind_phone"
+                android:textColor="@color/text_gray_color"
+                android:textSize="@dimen/common_text_n" />
+
+
+            <ImageView
+                style="@style/NextIcon"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:layout_marginRight="@dimen/common_margin_s" />
+
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View style="@style/MainHorizontalLine" />
+
+            <LinearLayout
+                android:id="@+id/user_help"
+                style="@style/MainItem">
+
+                <ImageView
+                    android:layout_width="@dimen/user_nav_icon_size"
+                    android:layout_height="@dimen/user_nav_icon_size"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_user_help" />
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_marginLeft="@dimen/common_margin_xs"
+                    android:layout_weight="1"
+                    android:text="@string/user_nav_help" />
+
+                <ImageView
+                    style="@style/NextIcon"
+                    android:layout_marginRight="@dimen/common_margin_s" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginLeft="@dimen/common_item_height" />
+
+            <LinearLayout
+                android:id="@+id/user_feedback"
+                style="@style/MainItem">
+
+                <ImageView
+                    android:layout_width="@dimen/user_nav_icon_size"
+                    android:layout_height="@dimen/user_nav_icon_size"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_user_feedback" />
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_marginLeft="@dimen/common_margin_xs"
+                    android:layout_weight="1"
+                    android:text="@string/user_nav_feedback" />
+
+                <ImageView
+                    style="@style/NextIcon"
+                    android:layout_marginRight="@dimen/common_margin_s" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginLeft="@dimen/common_item_height" />
+
+            <LinearLayout
+                android:id="@+id/user_about"
+                style="@style/MainItem">
+
+                <ImageView
+                    android:layout_width="@dimen/user_nav_icon_size"
+                    android:layout_height="@dimen/user_nav_icon_size"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_user_about" />
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_marginLeft="@dimen/common_margin_xs"
+                    android:layout_weight="1"
+                    android:text="@string/user_nav_about" />
+
+                <ImageView
+                    style="@style/NextIcon"
+                    android:layout_marginRight="@dimen/common_margin_s" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <LinearLayout
+            android:id="@+id/user_setting"
+            style="@style/MainItem">
+
+            <ImageView
+                android:layout_width="@dimen/user_nav_icon_size"
+                android:layout_height="@dimen/user_nav_icon_size"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_user_setting" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_weight="1"
+                android:text="@string/user_nav_setting" />
+
+            <ImageView
+                style="@style/NextIcon"
+                android:layout_marginRight="@dimen/common_margin_s" />
+
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+release
+/app/*.iml
+/BaseLib/*.iml
+/DialogLib/*.iml
+/QRCode/*.iml
+/PhotoPicker/*.iml
+/*.iml
+/PayLib/*.iml
+/.idea
+/.gradle
+build

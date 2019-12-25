@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="area_list">
+        <item>+86,中国</item>
+        <item>+853,中国澳门</item>
+        <item>+886,中国台湾</item>
+        <item>+852,中国香港</item>
+    </string-array>
+
+    <string-array name="photo_source_choice">
+        <item>拍摄</item>
+        <item>从相册选择</item>
+    </string-array>
+
+    <integer-array name="course_item_color">
+        <item>@color/message_course_item1</item>
+        <item>@color/message_course_item2</item>
+        <item>@color/message_course_item3</item>
+        <item>@color/message_course_item4</item>
+        <item>@color/message_course_item5</item>
+        <item>@color/message_course_item6</item>
+        <item>@color/message_course_item7</item>
+        <item>@color/message_course_item8</item>
+    </integer-array>
+
+    <string-array name="repair_action">
+        <item>撤销</item>
+        <item>取消</item>
+        <item>修改</item>
+        <item>去维修</item>
+        <item>确认</item>
+        <item>催办</item>
+        <item>维修人</item>
+        <item>归档</item>
+    </string-array>
+
+    <string-array name="repair_query_text">
+        <item>待处理</item>
+        <item>处理中</item>
+        <item>已完成</item>
+        <item>全部</item>
+    </string-array>
+
+    <integer-array name="repair_query_status">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+    </integer-array>
+
+    <string-array name="leave_query_text">
+        <item>待处理</item>
+        <item>处理中</item>
+        <item>已完成</item>
+        <item>全部</item>
+    </string-array>
+
+    <integer-array name="leave_query_status">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+    </integer-array>
+
+    <string-array name="leave_action">
+        <item>同意</item>
+        <item>驳回</item>
+        <item>取消</item>
+        <item>修改</item>
+        <item>归档</item>
+        <item>催办</item>
+    </string-array>
+
+    <string-array name="module_name">
+        <item>请假申请</item>
+        <item>请假审批</item>
+        <item>报修申请</item>
+        <item>报修受理</item>
+        <item>校园资讯</item>
+        <item>校园卡充值</item>
+        <item>通讯录</item>
+        <item>课程表</item>
+    </string-array>
+
+    <string-array name="lost_type_name">
+        <item>@string/lost_type_found</item>
+        <item>@string/lost_type_lost</item>
+    </string-array>
+
+    <integer-array name="lost_type">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="lost_type_color">
+        <item>@color/lost_text_id_card</item>
+        <item>@color/lost_text_bank_card</item>
+        <item>@color/lost_text_campus_card</item>
+        <item>@color/lost_text_wallet</item>
+        <item>@color/lost_text_book</item>
+        <item>@color/lost_text_others</item>
+    </integer-array>
+
+    <string-array name="card_qr_operate">
+        <item>使用说明</item>
+        <item>暂停使用</item>
+        <item>取消</item>
+    </string-array>
+
+    <string-array name="card_qr_operate2">
+        <item>使用说明</item>
+        <item>取消</item>
+    </string-array>
+</resources>

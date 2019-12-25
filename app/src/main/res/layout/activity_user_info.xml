@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contacts_user_header_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/common_margin_s">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_header"
+            style="@style/Image.Circle"
+            android:layout_width="@dimen/contacts_user_header_size"
+            android:layout_height="@dimen/contacts_user_header_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_user_default_square_head" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+    </LinearLayout>
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginBottom="@dimen/common_margin_xs" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/phone_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:text="@string/contacts_user_phone" />
+
+            <TextView
+                android:id="@+id/user_phone"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:id="@+id/short_number_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:text="@string/contacts_short_number" />
+
+            <TextView
+                android:id="@+id/short_number"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:id="@+id/user_tel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:text="@string/contacts_user_tel" />
+
+            <TextView
+                android:id="@+id/user_tel"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/user_tel_line"
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:text="@string/contacts_user_email" />
+
+            <TextView
+                android:id="@+id/user_email"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/user_department_label"
+                style="@style/MainText"
+                android:text="@string/user_staff_department" />
+
+            <TextView
+                android:id="@+id/user_department"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/common_item_height_s"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/user_grade_class_label"
+                style="@style/MainText"
+                android:text="@string/user_grade_class" />
+
+            <TextView
+                android:id="@+id/user_grade_class"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/text_gray_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+</LinearLayout>

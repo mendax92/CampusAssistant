@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lost_my_header_height">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lost_my_header_bg_height"
+            android:background="@drawable/bg_lost_my_header"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/common_margin_normal"
+            android:layout_marginRight="@dimen/common_margin_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_text_l" />
+
+            <ImageView
+                android:id="@+id/user_header"
+                android:layout_width="@dimen/lost_my_header_size"
+                android:layout_height="@dimen/lost_my_header_size"
+                android:layout_marginLeft="@dimen/common_margin_normal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_square_header" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_margin_xs"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/common_today"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_l" />
+
+        <FrameLayout
+            android:id="@+id/lost_add"
+            android:layout_width="@dimen/common_choose_img_size"
+            android:layout_height="@dimen/common_choose_img_size"
+            android:layout_marginLeft="@dimen/lost_my_margin_left"
+            android:background="@drawable/lost_add_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/common_add"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/common_text_s" />
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

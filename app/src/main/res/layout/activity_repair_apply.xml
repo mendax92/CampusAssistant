@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_xs"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/MainHorizontalLine" />
+
+                <RelativeLayout
+                    android:id="@+id/repair_type_layout"
+                    style="@style/MainInputWhole"
+                    android:background="@drawable/common_content_selector">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_project" />
+
+                    <ImageView
+                        android:id="@+id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <TextView
+                        android:id="@+id/repair_type"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@+id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/apply_choice_hint" />
+
+
+                    <ImageView
+                        style="@style/NextIcon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout
+                    style="@style/MainInputWhole"
+                    android:layout_height="@dimen/leave_details_height">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal"
+                        android:text="@string/repair_describe" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.AppEditText
+                        android:id="@+id/repair_describe"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_describe_hint"
+                        android:maxLength="200" />
+
+                </RelativeLayout>
+
+
+                <View style="@style/MainHorizontalLine" />
+            </LinearLayout>
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/repair_add_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_pick_img_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/common_margin_xs" />
+
+            <View style="@style/MainHorizontalLine" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height_s"
+                android:background="@color/windowBackground_sub">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/common_margin_s"
+                    android:text="@string/repair_user_info"
+                    android:textColor="@color/text_gray_color"
+                    android:textSize="@dimen/common_text_s" />
+
+                <TextView
+                    android:id="@+id/applicant_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="@dimen/common_margin_s"
+                    android:gravity="center"
+                    android:text="@string/repair_user_info_describe"
+                    android:textColor="@color/text_blue_color"
+                    android:textSize="@dimen/common_text_s" />
+            </FrameLayout>
+
+            <View style="@style/MainHorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/MainInputWhole">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_user_name_label" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.ClearEditText
+                        android:id="@+id/repair_name"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_user_name_hint"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout style="@style/MainInputWhole">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_contact_number" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.ClearEditText
+                        android:id="@+id/repair_phone"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_contact_hint"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout
+                    android:id="@+id/repair_campus_area_layout"
+                    style="@style/MainInputWhole"
+                    android:background="@drawable/common_content_selector">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_campus_area_label" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <TextView
+                        android:id="@+id/repair_campus_area"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@+id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_campus_area_hint" />
+
+
+                    <ImageView
+                        style="@style/NextIcon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout
+                    android:id="@+id/repair_break_area_layout"
+                    style="@style/MainInputWhole"
+                    android:background="@drawable/common_content_selector">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_break_area_label" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <TextView
+                        android:id="@+id/repair_break_area"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@+id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_break_area_hint" />
+
+
+                    <ImageView
+                        style="@style/NextIcon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout style="@style/MainInputWhole">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/repair_location_label" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.ClearEditText
+                        android:id="@+id/repair_location"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/repair_location_hint"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <View style="@style/MainHorizontalLine" />
+
+            </LinearLayout>
+
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+            <RelativeLayout
+                android:id="@+id/repair_appointment_layout"
+                style="@style/MainInputWhole"
+                android:background="@drawable/common_content_selector">
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_centerVertical="true"
+                    android:text="@string/repair_appointment_time" />
+
+                <ImageView
+                    android:id="@id/input_split"
+                    style="@style/MainInputSplit" />
+
+                <TextView
+                    android:id="@+id/repair_appointment_time"
+                    style="@style/MainInputEdit"
+                    android:layout_toRightOf="@+id/input_split"
+                    android:gravity="center_vertical"
+                    android:hint="@string/repair_appointment_time_hint" />
+
+
+                <ImageView
+                    style="@style/NextIcon"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginBottom="@dimen/common_margin_xs" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View style="@style/MainHorizontalLine" />
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_marginBottom="@dimen/common_margin_xs"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_marginRight="@dimen/common_margin_normal"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:enabled="false"
+            android:text="@string/common_submit" />
+    </LinearLayout>
+</LinearLayout>

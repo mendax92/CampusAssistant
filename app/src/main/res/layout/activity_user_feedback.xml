@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin_normal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/user_feedback_select_type"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_xs" />
+
+        <View style="@style/MainHorizontalLine" />
+
+        <RadioGroup
+            android:id="@+id/feedback_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.ming.base.widget.RadioDrawableView
+                    android:id="@+id/feedback_suggest"
+                    style="@style/AppTheme.RadioDrawableView"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_tab_icon_padding"
+                    android:duplicateParentState="true"
+                    android:text="@string/user_feedback_product_suggest" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.ming.base.widget.RadioDrawableView
+                    android:id="@+id/feedback_app_error"
+                    style="@style/AppTheme.RadioDrawableView"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_tab_icon_padding"
+                    android:duplicateParentState="true"
+                    android:text="@string/user_feedback_app_error" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.ming.base.widget.RadioDrawableView
+                    android:id="@+id/feedback_others"
+                    style="@style/AppTheme.RadioDrawableView"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_tab_icon_padding"
+                    android:duplicateParentState="true"
+                    android:text="@string/user_feedback_others" />
+            </FrameLayout>
+        </RadioGroup>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_feedback_text_area_height"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.ming.base.widget.AppEditText
+                android:id="@+id/feedback_edit_area"
+                style="@style/MainEditText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/user_feedback_area_hint"
+                android:maxLength="200"
+                android:paddingBottom="@dimen/common_margin_xs"
+                android:paddingLeft="@dimen/common_margin_s"
+                android:paddingRight="@dimen/common_margin_s"
+                android:paddingTop="@dimen/common_margin_xs" />
+
+            <TextView
+                android:id="@+id/feedback_edit_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:paddingBottom="@dimen/common_margin_xs"
+                android:text="@string/user_feedback_area_tip"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_s" />
+
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <RelativeLayout style="@style/MainInputWhole">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_centerVertical="true"
+                android:text="@string/repair_contact_number" />
+
+            <ImageView
+                android:id="@+id/input_split"
+                style="@style/MainInputSplit" />
+
+            <com.ming.base.widget.ClearEditText
+                android:id="@+id/contact"
+                style="@style/MainInputEdit"
+                android:layout_toRightOf="@+id/input_split"
+                android:hint="@string/user_feedback_contact_hint"
+                android:maxLength="30"
+                android:maxLines="1" />
+
+        </RelativeLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <Button
+            android:id="@+id/commit"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_margin="@dimen/common_margin_normal"
+            android:enabled="false"
+            android:text="@string/common_submit" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

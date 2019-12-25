@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/pay_history"
+        android:icon="@drawable/ic_pay_history"
+        app:showAsAction="ifRoom"
+        android:title="@string/pay_history" />
+
+    <item
+        android:id="@+id/pay_notice"
+        android:icon="@drawable/ic_menu_introduce"
+        app:showAsAction="ifRoom"
+        android:title="@string/common_discribe_function" />
+
+</menu>

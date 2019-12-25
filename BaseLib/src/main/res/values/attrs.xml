@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="minor_drawable">
+        <attr name="left_drawable_width" format="dimension" />
+        <attr name="left_drawable_height" format="dimension" />
+        <attr name="top_drawable_width" format="dimension" />
+        <attr name="top_drawable_height" format="dimension" />
+        <attr name="right_drawable_width" format="dimension" />
+        <attr name="right_drawable_height" format="dimension" />
+        <attr name="bottom_drawable_width" format="dimension" />
+        <attr name="bottom_drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="badge_view">
+        <attr name="position" format="integer|enum|reference">
+            <enum name="POSITION_TOP_LEFT" value="1" />
+            <enum name="POSITION_TOP_CENTER" value="2" />
+            <enum name="POSITION_TOP_RIGHT" value="3" />
+            <enum name="POSITION_BOTTOM_LEFT" value="4" />
+            <enum name="POSITION_BOTTOM_CENTER" value="5" />
+            <enum name="POSITION_BOTTOM_RIGHT" value="6" />
+            <enum name="POSITION_LEFT_CENTER" value="7" />
+            <enum name="POSITION_RIGHT_CENTER" value="8" />
+            <enum name="POSITION_CENTER" value="9" />
+        </attr>
+        <attr name="badge_margin" format="dimension" />
+        <attr name="badge_margin_horizontal" format="reference|dimension" />
+        <attr name="badge_margin_vertical" format="reference|dimension" />
+        <attr name="badge_padding" format="reference|dimension" />
+        <attr name="badge_padding_horizontal" format="reference|dimension" />
+        <attr name="badge_padding_vertical" format="reference|dimension" />
+        <attr name="badge_color" format="reference|color" />
+        <attr name="empty_size" format="reference|dimension" />
+        <attr name="badge_textColor" format="reference|color" />
+        <attr name="badge_textSize" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="search_layout_view">
+        <attr name="isActionbar" format="boolean" />
+        <attr name="search_icon_margin" format="reference|dimension" />
+        <attr name="search_icon_margin_left" format="reference|dimension" />
+        <attr name="search_icon_margin_right" format="reference|dimension" />
+        <attr name="search_edit_margin" format="reference|dimension" />
+        <attr name="search_edit_margin_left" format="reference|dimension" />
+        <attr name="search_edit_margin_right" format="reference|dimension" />
+        <attr name="search_edit_padding" format="reference|dimension" />
+        <attr name="search_edit_padding_left" format="reference|dimension" />
+        <attr name="search_edit_padding_right" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TwoDimensionalLayout">
+        <attr name="headerDivider" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="circle_color" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="LinearListView">
+        <attr name="android:entries" />
+        <attr name="dividerThickness" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="edit_clear_icon" format="reference" />
+        <attr name="edit_clear_icon_width" format="reference|dimension" />
+        <attr name="edit_clear_icon_height" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberPicker">
+        <attr name="picker_divider_color" format="reference|color" />
+        <attr name="picker_divider_height" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DashLineView">
+        <attr name="dashWidth" format="reference|dimension" />
+        <attr name="dashHeight" format="reference|dimension" />
+        <attr name="dashGap" format="reference|dimension" />
+        <attr name="dashColor" format="reference|dimension" />
+        <attr name="dashOrientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

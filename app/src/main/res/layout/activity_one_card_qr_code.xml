@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="@dimen/common_margin_xs">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="350.0dip"
+        android:background="@drawable/one_card_qr_code_bg"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:layout_marginBottom="@dimen/common_margin_xl"
+            android:text="@string/one_card_pay_to_business" />
+
+        <RelativeLayout
+            android:id="@+id/open_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/empty_img"
+                android:layout_width="@dimen/common_empty_image_size_l"
+                android:layout_height="@dimen/common_empty_image_size_l"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_img_square_l" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/close_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/empty_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/common_margin_xxxl"
+                android:layout_marginTop="@dimen/common_margin_normal"
+                android:layout_marginRight="@dimen/common_margin_xxxl"
+                android:gravity="center"
+                android:text="@string/one_card_not_open_tip"
+                android:textColor="@color/text_gray_dark_color" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/qr_open"
+                style="@style/MainButton"
+                android:layout_width="160.0dip"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common_margin_l"
+                android:text="@string/one_card_qr_open" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/qr_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/qr_code"
+                android:layout_width="@dimen/one_card_qr_img_size"
+                android:layout_height="@dimen/one_card_qr_img_size"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_refresh_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qr_code"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/common_margin_xxxl"
+                android:layout_marginTop="@dimen/common_margin_xs"
+                android:layout_marginRight="@dimen/common_margin_xxxl"
+                android:gravity="center"
+                android:text="@string/one_card_auto_update_tip"
+                android:textColor="@color/text_gray_xdark_color"
+                android:textSize="@dimen/common_text_s" />
+        </RelativeLayout>
+    </LinearLayout>
+
+        <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/app_top_img_height_120"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/common_margin_xxxxl" />
+</LinearLayout>

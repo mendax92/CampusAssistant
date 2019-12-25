@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/common_margin_xs">
+
+    <TextView
+        android:id="@+id/room"
+        style="@style/MainText" />
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="@dimen/common_text_s" />
+
+    <com.ming.base.widget.DashLineView
+        style="@style/MainHorizontalDashLine"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_marginRight="@dimen/common_margin_normal"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin_xs"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.ming.base.widget.TextDrawableView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_bed_choose_normal"
+            android:drawablePadding="@dimen/common_margin_xs"
+            android:gravity="center_vertical"
+            android:text="@string/bedroom_choose_enable"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_s"
+            app:left_drawable_height="@dimen/common_ic_operate_size"
+            app:left_drawable_width="@dimen/common_ic_operate_size" />
+
+        <com.ming.base.widget.TextDrawableView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xl"
+            android:drawableLeft="@drawable/ic_bed_choose_disable"
+            android:drawablePadding="@dimen/common_margin_xs"
+            android:gravity="center_vertical"
+            android:text="@string/bedroom_choose_been"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_s"
+            app:left_drawable_height="@dimen/common_ic_operate_size"
+            app:left_drawable_width="@dimen/common_ic_operate_size" />
+
+        <com.ming.base.widget.TextDrawableView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xl"
+            android:drawableLeft="@drawable/ic_bed_choose_checked"
+            android:drawablePadding="@dimen/common_margin_xs"
+            android:gravity="center_vertical"
+            android:text="@string/bedroom_choose_checked"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_s"
+            app:left_drawable_height="@dimen/common_ic_operate_size"
+            app:left_drawable_width="@dimen/common_ic_operate_size" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_xs"
+        android:background="@color/common_line_color"
+        android:gravity="center"
+        android:text="@string/bedroom_window_balcony_toilet"
+        android:textColor="@color/text_main_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <com.zhiqi.campusassistant.ui.bedroom.widget.BedChooseLayout
+        android:id="@+id/bed_choose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windowBackground" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_xs"
+        android:background="@color/common_line_color"
+        android:gravity="center"
+        android:text="@string/bedroom_door_window"
+        android:textColor="@color/text_main_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin_normal"
+        android:paddingRight="@dimen/common_margin_normal">
+
+        <TextView
+            style="@style/MainText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/bedroom_select" />
+
+        <TextView
+            android:id="@+id/choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/green"
+            android:textSize="@dimen/common_text_n" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/commit"
+        style="@style/MainButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_marginBottom="@dimen/common_margin_xs"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_marginRight="@dimen/common_margin_normal"
+        android:enabled="false"
+        android:text="@string/bedroom_choose_confirm" />
+
+</LinearLayout>

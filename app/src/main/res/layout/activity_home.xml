@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/main_frag_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/main_tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_tab_height"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ming.base.widget.RadioDrawableView
+                android:id="@+id/tab_msg"
+                style="@style/MainTabStyle"
+                android:drawableTop="@drawable/ic_main_tab_msg_n"
+                android:text="@string/common_message" />
+
+            <!--<com.ming.base.widget.BadgeView
+                android:id="@+id/tab_msg_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:badge_margin="0dp"
+                app:position="POSITION_TOP_RIGHT" />-->
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ming.base.widget.RadioDrawableView
+                android:id="@+id/tab_app"
+                style="@style/MainTabStyle"
+                android:drawableTop="@drawable/main_tab_app"
+                android:text="@string/common_app" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ming.base.widget.RadioDrawableView
+                android:id="@+id/tab_course"
+                style="@style/MainTabStyle"
+                android:drawableTop="@drawable/main_tab_course"
+                android:text="@string/common_course" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ming.base.widget.RadioDrawableView
+                android:id="@+id/tab_me"
+                style="@style/MainTabStyle"
+                android:drawableTop="@drawable/ic_main_tab_me_n"
+                android:text="@string/common_mine" />
+        </FrameLayout>
+    </RadioGroup>
+</LinearLayout>

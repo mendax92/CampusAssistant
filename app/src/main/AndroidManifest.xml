@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhiqi.campusassistant">
+
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <!-- Start JPush -->
+    <!-- Required -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- End JPush -->
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <application
+        android:name=".app.AssistantApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 渠道号 -->
+        <meta-data
+            android:name="channel"
+            android:value="${channel_value}" />
+
+        <!-- 高德地图-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d5e0a5ccc4b0de110ca71e4523361c14" />
+
+        <activity
+            android:name=".ui.launch.activity.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.launch.activity.NavigationActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Navigation" />
+
+        <activity
+            android:name=".ui.login.activity.LoginActivity"
+            android:label="@string/login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 注册微信回调 WXEntryActivity -->
+        <activity
+            android:name=".gdgsxy.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信支付 -->
+        <activity
+            android:name=".gdgsxy.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.login.activity.BindPhoneActivity"
+            android:label="@string/login_forget_pwd"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.activity.AreaChoiceActvitity"
+            android:label="@string/login_area_choice"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.activity.VerifyCodeActivity"
+            android:label="@string/login_verify_fill_code"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.activity.ResetPwdActivity"
+            android:label="@string/login_pwd_reset"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.main.activity.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.leave.activity.LeaveRecordActivity"
+            android:label="@string/leave_apply"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.contacts.activity.ContactsActivity"
+            android:label="@string/common_address_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.contacts.activity.SearchContactsActivity"
+            android:label="@string/common_address_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <activity
+            android:name=".ui.contacts.activity.UserInfoActivity"
+            android:label="@string/contacts_user_info"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.course.activity.CourseDetailActivity"
+            android:label="@string/course_detail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.leave.activity.LeaveApplyActivity"
+            android:label="@string/leave_apply_me"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.repair.activity.RepairRecordActivity"
+            android:label="@string/repair_apply"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.repair.activity.RepairApplyActivity"
+            android:label="@string/repair_apply_me"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.repair.activity.RepairApprovalActivity"
+            android:label="@string/common_repair_approval"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.ming.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SmallMenu" />
+
+        <activity
+            android:name="com.ming.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SmallMenu" />
+
+        <activity
+            android:name=".ui.repair.activity.RepairDetailActivity"
+            android:exported="true"
+            android:label="@string/repair_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.repair.activity.RepairApplicantListActivity"
+            android:label="@string/repair_applicant_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.leave.activity.LeaveDetailActivity"
+            android:label="@string/leave_details"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.leave.activity.LeaveChooseActivity"
+            android:label="@string/common_leave_approval"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.leave.activity.LeaveApprovalActivity"
+            android:label="@string/common_leave_approval"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.news.activity.NewsActivity"
+            android:label="@string/common_information"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.web.activity.WebActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Closer"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="browser" />
+                <data android:scheme="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.user.activity.UserHelperActivity"
+            android:label="@string/user_nav_help"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.UserFeedbackActivity"
+            android:label="@string/user_nav_feedback"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.user.activity.AboutActivity"
+            android:label="@string/common_about"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.SettingActivity"
+            android:label="@string/user_nav_setting"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.AccountSafeActivity"
+            android:label="@string/user_setting_account_safe"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.ChangePasswordActivity"
+            android:label="@string/user_setting_change_pwd"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.ChangePhoneActivity"
+            android:label="@string/user_account_phone"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.user.activity.IntroduceActivity"
+            android:label="@string/common_details"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.notice.activity.NoticeActivity"
+            android:label="@string/notice_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.lost.activity.LostFoundActivity"
+            android:label="@string/lost_found_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.lost.activity.MyLostActivity"
+            android:label="@string/lost_my_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.lost.activity.LostApplyActivity"
+            android:label="@string/lost_apply_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.scores.activity.ScoresListActivity"
+            android:label="@string/scores_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.scores.activity.ScoresDetailActivity"
+            android:label="@string/scores_details_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.selfpay.activity.SelfPayActivity"
+            android:label="@string/pay_self"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.selfpay.activity.ToPayListActivity"
+            android:label="@string/pay_wait_pay"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.selfpay.activity.PayInfoActivity"
+            android:label="@string/pay_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.selfpay.activity.PaidListActivity"
+            android:label="@string/pay_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.selfpay.activity.PaidDetailActivity"
+            android:label="@string/pay_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.location.activity.CampusNavActivity"
+            android:label="@string/location_campus_navigate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.entrance.activity.EntranceGuideActivity"
+            android:label="@string/entrance_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.bedroom.activity.BedRoomInfoActivity"
+            android:label="@string/bedroom_select"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.bedroom.activity.BedChooseActivity"
+            android:label="@string/bedroom_i_choose"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.bedroom.activity.BedChosenDetailActivity"
+            android:label="@string/bedroom_chosen_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CampusCardActivity"
+            android:label="@string/one_card_campus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CardBalanceActivity"
+            android:label="@string/one_card_balance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CardPaymentActivity"
+            android:label="@string/one_card_top_up"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CardOrderDetailActivity"
+            android:label="@string/one_card_account_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CardOrderListActivity"
+            android:label="@string/one_card_account_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CardQrCodeActivity"
+            android:label="@string/one_card_qr_code"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.onecard.activity.CheckCardPwdActivity"
+            android:label="@string/one_card_open_qr_payment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.user.activity.ChangePayPwdActivity"
+            android:label="@string/user_pay_change_pwd"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.user.activity.ResetPayPwdActivity"
+            android:label="@string/user_pay_reset_pwd"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 微信 -->
+<!--        <activity-->
+<!--            android:name="${applicationId}.wxapi.WXPayEntryActivity"-->
+<!--            android:exported="true"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/TranslucentTheme" />-->
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!-- JPush -->
+        <receiver
+            android:name=".core.jpush.service.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 图片库 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/photo_picker_provider_paths" />
+        </provider>
+
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+    </application>
+
+</manifest>

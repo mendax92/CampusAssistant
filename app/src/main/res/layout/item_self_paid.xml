@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/common_margin_s"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_top"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <TextView
+            android:id="@+id/pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_payment_voucher"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <TextView
+            android:id="@+id/pay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+
+        <com.ming.base.widget.DashLineView
+            style="@style/MainHorizontalDashLine"
+            android:layout_below="@+id/pay_title"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_center"
+        android:paddingBottom="@dimen/common_margin_xs"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <TextView
+            android:id="@+id/pay_trade_label"
+            style="@style/MainText"
+            android:text="@string/pay_trade_name" />
+
+        <TextView
+            android:id="@+id/pay_trade"
+            style="@style/MainText"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/pay_money_label"
+            style="@style/MainText"
+            android:layout_below="@+id/pay_trade_label"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:text="@string/pay_trade_money" />
+
+        <TextView
+            android:id="@+id/pay_money"
+            style="@style/MainText"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/pay_money_label" />
+
+        <TextView
+            android:id="@+id/pay_status_label"
+            style="@style/MainText"
+            android:layout_below="@+id/pay_money_label"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:text="@string/pay_status" />
+
+        <TextView
+            android:id="@+id/pay_status"
+            style="@style/MainText"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/pay_status_label" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_bottom"
+        android:paddingBottom="@dimen/common_margin_xs"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s">
+
+        <com.ming.base.widget.DashLineView style="@style/MainHorizontalDashLine" />
+
+        <TextView
+            android:id="@+id/pay_opera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:text="@string/pay_opera_details"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_n" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_grid_size"
+    android:background="@drawable/common_content_selector">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/app_view_width"
+            android:layout_height="@dimen/app_view_height">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="@dimen/common_icon_size"
+                android:layout_height="@dimen/common_icon_size"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+            <com.ming.base.widget.BadgeView
+                android:id="@+id/app_msg_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                app:badge_margin="0dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_main_text"
+            android:textSize="@dimen/common_text_s" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/coming_soon"
+        android:layout_width="@dimen/app_view_height"
+        android:layout_height="@dimen/app_view_height"
+        android:layout_gravity="top|right"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_module_coming_soon" />
+</FrameLayout>

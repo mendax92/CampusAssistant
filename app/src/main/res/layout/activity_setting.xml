@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:id="@+id/account_safe"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <TextView
+            style="@style/MainText"
+            android:layout_weight="1"
+            android:text="@string/user_setting_account_safe" />
+
+        <ImageView
+            style="@style/NextIcon"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:id="@+id/msg_notice"
+            style="@style/MainItem"
+            android:layout_height="@dimen/common_item_height_m"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_weight="1"
+                android:text="@string/user_setting_message_notice" />
+
+            <CheckBox
+                android:id="@+id/notice_toggle"
+                style="@style/AppTheme.ToggleCheckBox"
+                android:layout_marginRight="@dimen/common_margin_s" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:id="@+id/clear_cache"
+            style="@style/MainItem"
+            android:layout_height="@dimen/common_item_height_m">
+
+            <TextView
+                style="@style/MainText"
+                android:text="@string/user_setting_clear_cache" />
+
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/MainButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_margin="@dimen/common_margin_normal"
+        android:text="@string/logout" />
+
+</LinearLayout>

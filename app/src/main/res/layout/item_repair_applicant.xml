@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/common_item_height_m"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <TextView
+        android:id="@+id/applicant_name"
+        style="@style/MainText"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/applicant_name"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/common_text_xs" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        style="@style/MainText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/applicant_name"
+        android:maxLines="1" />
+
+</RelativeLayout>

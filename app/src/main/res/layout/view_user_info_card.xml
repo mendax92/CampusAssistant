@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/user_card_top_height"
+        android:background="@drawable/user_bg_card_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/user_school_logo"
+            android:layout_width="@dimen/user_card_logo_size"
+            android:layout_height="@dimen/user_card_logo_size"
+            android:layout_marginLeft="@dimen/common_margin_xs"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_school_logo_1" />
+
+        <TextView
+            android:id="@+id/user_school_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xxs"
+            android:layout_weight="1.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_m" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_bg_card_content"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_normal"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingBottom="@dimen/common_margin_normal">
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/user_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/user_card_right_margin"
+                android:text="@string/user_name_label"
+                android:textColor="@color/text_gray_color"
+                android:textSize="@dimen/common_text_xs" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/MainText"
+                android:layout_below="@id/user_name_label"
+                android:layout_alignLeft="@id/user_name_label"
+                android:layout_marginTop="@dimen/user_card_margin_s"
+                android:layout_toLeftOf="@id/user_number_text" />
+
+            <TextView
+                android:id="@+id/user_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_input_split_margin_left"
+                android:text="@string/user_student_number"
+                android:textColor="@color/text_gray_color"
+                android:textSize="@dimen/common_text_xs" />
+
+            <TextView
+                android:id="@+id/user_number_text"
+                style="@style/MainText"
+                android:layout_below="@id/user_number_label"
+                android:layout_alignLeft="@id/user_number_label"
+                android:layout_marginTop="@dimen/user_card_margin_s"
+                android:layout_toRightOf="@id/user_name_label" />
+
+            <TextView
+                android:id="@+id/user_department_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name"
+                android:layout_marginTop="@dimen/user_card_margin_n"
+                android:text="@string/user_department"
+                android:textColor="@color/text_gray_color"
+                android:textSize="@dimen/common_text_xs" />
+
+            <TextView
+                android:id="@+id/user_department"
+                style="@style/MainText"
+                android:layout_below="@id/user_department_label"
+                android:layout_marginTop="@dimen/user_card_margin_s" />
+
+            <TextView
+                android:id="@+id/user_grade_class_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_department"
+                android:layout_marginTop="@dimen/user_card_margin_n"
+                android:text="@string/user_grade_class"
+                android:textColor="@color/text_gray_color"
+                android:textSize="@dimen/common_text_xs" />
+
+            <TextView
+                android:id="@+id/user_grade_class"
+                style="@style/MainText"
+                android:layout_below="@id/user_grade_class_label"
+                android:layout_marginTop="@dimen/user_card_margin_s" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/user_header"
+            android:layout_width="@dimen/user_portrait_width"
+            android:layout_height="@dimen/user_portrait_height"
+            android:background="@color/common_line_color"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+</LinearLayout>

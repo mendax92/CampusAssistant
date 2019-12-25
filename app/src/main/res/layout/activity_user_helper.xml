@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:gravity="center_vertical"
+        android:text="@string/user_help_online"
+        android:textColor="@color/text_hint_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_margin_xs"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/user_help_work_time"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/common_text_blue"
+            android:paddingLeft="@dimen/common_text_padding"
+            android:paddingRight="@dimen/common_text_padding"
+            android:text="@string/user_help_call_service"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_n" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:gravity="center_vertical"
+        android:text="@string/user_help_question"
+        android:textColor="@color/text_hint_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/forget_account"
+            style="@style/MainText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/user_help_forget_account" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <TextView
+            android:id="@+id/forget_pwd"
+            style="@style/MainText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/user_help_forget_pwd" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <TextView
+            android:id="@+id/no_receive_verify"
+            style="@style/MainText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/user_help_bind_no_verify" />
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+</LinearLayout>

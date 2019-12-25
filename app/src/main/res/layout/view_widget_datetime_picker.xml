@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.ming.base.widget.AppCompatNumberPicker
+        android:id="@+id/np_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:descendantFocusability="blocksDescendants"
+        android:minWidth="120dp"
+        android:theme="@style/DateTimePicker" />
+
+    <com.ming.base.widget.AppCompatNumberPicker
+        android:id="@+id/np_hour"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_xxs"
+        android:theme="@style/DateTimePicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=":"
+        android:textColor="@color/text_main_color"
+        android:textSize="@dimen/common_text_n" />
+
+    <com.ming.base.widget.AppCompatNumberPicker
+        android:id="@+id/np_minute"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/DateTimePicker" />
+</merge>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/leave_approval_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_content_selector"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_margin_xs"
+    android:paddingTop="@dimen/common_margin_xs">
+
+    <TextView
+        android:id="@+id/leave_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:textColor="@color/text_main_color"
+        android:textSize="@dimen/common_text_n" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_marginTop="@dimen/common_margin_xxs"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/apply_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_xdark_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <TextView
+            android:id="@+id/leave_apply_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xs"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_department_label"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:id="@+id/leave_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_xdark_color"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_marginTop="@dimen/common_margin_xxs"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_date_label"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:id="@+id/leave_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_xdark_color"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_marginRight="@dimen/common_margin_xs"
+        android:layout_marginTop="@dimen/common_margin_xxs"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/leave_reason_label"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:id="@+id/leave_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_gray_xdark_color"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+</LinearLayout>

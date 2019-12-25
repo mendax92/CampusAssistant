@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/common_margin_s"
+    android:paddingRight="@dimen/common_margin_s"
+    android:paddingTop="@dimen/common_margin_xs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/one_card_detail_top_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin_xs"
+        android:paddingRight="@dimen/common_margin_xs"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/MainText"
+            android:text="@string/one_card_payment_certificate" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/one_card_payment_amount"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_xxl" />
+
+        <com.ming.base.widget.DashLineView
+            style="@style/MainHorizontalDashLine"
+            android:layout_marginLeft="@dimen/common_margin_xxs"
+            android:layout_marginRight="@dimen/common_margin_xxs"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/one_card_detail_bottom_bg"
+        android:padding="@dimen/common_margin_xs">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_card_amount_type"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/type_name"
+            style="@style/MainText"
+            android:layout_alignBaseline="@+id/type_label"
+            android:layout_alignParentRight="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/order_no_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/type_label"
+            android:layout_marginTop="@dimen/common_margin_xxs"
+            android:text="@string/one_card_order_no"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/order_no"
+            style="@style/MainText"
+            android:layout_alignBaseline="@+id/order_no_label"
+            android:layout_alignParentRight="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/account_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_no_label"
+            android:layout_marginTop="@dimen/common_margin_xxs"
+            android:text="@string/one_card_account_balance"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/balance"
+            style="@style/MainText"
+            android:layout_alignBaseline="@+id/account_balance_label"
+            android:layout_alignParentRight="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/remark_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_balance_label"
+            android:layout_marginTop="@dimen/common_margin_xxs"
+            android:text="@string/one_card_remark"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/remark"
+            style="@style/MainText"
+            android:layout_alignBaseline="@+id/remark_label"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

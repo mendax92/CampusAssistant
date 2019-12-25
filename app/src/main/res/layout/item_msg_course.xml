@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msg_course_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_item_height_m"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <com.ming.base.widget.CircleView
+        android:id="@+id/msg_course_circle"
+        android:layout_width="@dimen/message_course_circle_size"
+        android:layout_height="@dimen/message_course_circle_size"
+        android:layout_marginLeft="@dimen/message_course_margin"
+        android:layout_marginRight="@dimen/message_course_margin"
+        app:circle_color="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/course_lesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/course_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <com.ming.base.widget.TextDrawableView
+            android:id="@+id/course_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_msg_course_location"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_msg_course_location"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_main_color"
+            android:textSize="@dimen/common_text_s"
+            app:left_drawable_height="@dimen/message_course_loc_size"
+            app:left_drawable_width="@dimen/message_course_loc_size" />
+    </LinearLayout>
+</LinearLayout>

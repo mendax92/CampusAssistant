@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/MainInputWhole">
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_centerVertical="true"
+                    android:text="@string/login_pwd_new" />
+
+                <ImageView
+                    android:id="@+id/input_split"
+                    style="@style/MainInputSplit" />
+
+                <com.ming.base.widget.ClearEditText
+                    android:id="@+id/login_pwd_input"
+                    style="@style/MainInputPassword"
+                    android:layout_toRightOf="@+id/input_split"
+                    android:digits="0123456789"
+                    android:hint="@string/user_setting_pay_new_pwd_tip"
+                    android:inputType="numberPassword"
+                    android:maxLength="6" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <RelativeLayout style="@style/MainInputWhole">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_centerVertical="true"
+                android:text="@string/login_pwd_confirm" />
+
+            <ImageView
+                android:id="@id/input_split"
+                style="@style/MainInputSplit" />
+
+            <com.ming.base.widget.ClearEditText
+                android:id="@+id/login_confirm_input"
+                style="@style/MainInputPassword"
+                android:layout_toRightOf="@+id/input_split"
+                android:digits="0123456789"
+                android:hint="@string/user_setting_pay_pwd_again_tip"
+                android:inputType="numberPassword"
+                android:maxLength="6" />
+
+        </RelativeLayout>
+
+
+        <View style="@style/MainHorizontalLine" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:text="@string/user_setting_pay_pwd_input_tip"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <Button
+        android:id="@+id/commit"
+        style="@style/MainButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_marginRight="@dimen/common_margin_normal"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:enabled="false"
+        android:text="@string/common_save" />
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_simple_header" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_xs" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:background="@color/windowBackground_sub"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/pay_choice_list"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/common_text_s" />
+
+        <ImageView
+            android:layout_width="@dimen/common_icon_size_xxs"
+            android:layout_height="@dimen/common_icon_size_xxs"
+            android:layout_gravity="center_vertical|right"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_pay_info" />
+    </FrameLayout>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:background="@color/windowBackground_sub"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s"
+        android:gravity="center_vertical"
+        android:text="@string/pay_choice_list"
+        android:textColor="@color/text_hint_color"
+        android:textSize="@dimen/common_text_s" />
+
+    <View style="@style/MainHorizontalLine" />
+
+    <com.zhiqi.campusassistant.common.ui.widget.MaterialSwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <include layout="@layout/view_common_recycler" />
+    </com.zhiqi.campusassistant.common.ui.widget.MaterialSwipeRefreshLayout>
+</LinearLayout>

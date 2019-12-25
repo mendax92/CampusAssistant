@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_xxl"
+        android:background="@color/windowBackground_sub"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/one_card_pay_qr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/common_content_selector">
+
+            <ImageView
+                android:layout_width="@dimen/common_icon_size"
+                android:layout_height="@dimen/common_icon_size"
+                android:layout_above="@+id/qr_code_label"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_card_scan_qr" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/qr_code_label"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common_margin_normal"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:text="@string/one_card_pay_qr" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/one_card_balance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/common_content_selector">
+
+            <ImageView
+                android:layout_width="@dimen/common_icon_size"
+                android:layout_height="@dimen/common_icon_size"
+                android:layout_above="@+id/account_balance_label"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_card_balance" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/account_balance_label"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common_margin_normal"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:text="@string/one_card_balance" />
+
+            <TextView
+                android:id="@+id/account_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common_margin_xs"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:textColor="@color/text_gray_xdark_color"
+                android:textSize="@dimen/common_text_xs" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+
+    <LinearLayout
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <ImageView
+            android:layout_width="@dimen/common_icon_size_s"
+            android:layout_height="@dimen/common_icon_size_s"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_card_electric_top" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_weight="1"
+            android:text="@string/one_card_electric_top" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:layout_marginRight="@dimen/common_margin_s"
+            android:text="@string/one_card_coming_tip"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_n" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+</LinearLayout>

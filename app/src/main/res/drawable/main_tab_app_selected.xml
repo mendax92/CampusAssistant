@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_1" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_2" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_3" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_4" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_5" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_6" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_7" />
+    </item>
+    <item android:duration="125">
+        <bitmap
+            android:width="@dimen/main_tab_icon_size"
+            android:height="@dimen/main_tab_icon_size"
+            android:src="@drawable/ic_main_tab_app_selected_8" />
+    </item>
+
+</animation-list>

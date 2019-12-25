@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_margin_s">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_header"
+        style="@style/Image.Circle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xs">
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/MainText" />
+
+            <TextView
+                android:id="@+id/lost_name"
+                style="@style/MainText"
+                android:layout_gravity="right" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/faculty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xs"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_xs" />
+
+        <com.ming.base.widget.DashLineView
+            style="@style/MainHorizontalDashLine"
+            android:layout_marginBottom="@dimen/common_margin_xs"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <TextView
+            android:id="@+id/lost_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin_xs" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lost_img"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_choose_img_size"
+            android:layout_marginBottom="@dimen/common_margin_xs"
+            android:overScrollMode="never" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/lost_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_xs" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="@dimen/common_ic_operate_size"
+                android:layout_height="@dimen/common_ic_operate_size"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_call_phone" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

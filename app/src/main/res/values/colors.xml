@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#d0000000</color>
+    <color name="white_30_percent">#4cffffff</color>
+    <color name="white_50_percent">#7fffffff</color>
+    <color name="black_40_percent">#7f000000</color>
+    <color name="red">#FE3939</color>
+    <color name="black">#000000</color>
+    <color name="green">#00990F</color>
+
+    <color name="colorPrimary">#0072c6</color>
+    <color name="colorAccent">#179bfc</color>
+    <!--<color name="colorPrimaryDark">#005999</color>-->
+    <color name="windowBackground">#f1f2f3</color>
+    <color name="windowBackground_sub">#f7f7f7</color>
+
+    <color name="text_main_color">#4a4a4a</color>
+    <color name="text_hint_color">#cccccc</color>
+    <color name="text_blue_color">#0072c6</color>
+    <color name="text_gray_color">#afb5b8</color>
+    <color name="text_link_color">#1997ff</color>
+    <color name="text_gray_dark_color">#979797</color>
+    <color name="text_gray_xdark_color">#737373</color>
+
+    <!-- 公用模块 -->
+    <color name="common_line_color">#dedede</color>
+    <color name="common_dark_press">#edeff0</color>
+    <color name="common_main_text">#0b3960</color>
+    <color name="common_btn_disable">#cccccc</color>
+    <color name="common_btn_pressed">#005999</color>
+    <color name="common_orange">#ff860f</color>
+
+    <!-- 主界面模块 -->
+    <color name="main_bottom_bg">#edeff0</color>
+    <color name="main_tab_text_n">#b3dfff</color>
+
+    <!-- 用户模块 -->
+    <color name="user_card_top_color">#cc1b1b</color>
+
+    <!-- 登录模块 -->
+    <color name="login_nav_btn_color">#54d8c8</color>
+
+    <!-- 消息模块 -->
+    <color name="message_course_item1">#9529ca</color>
+    <color name="message_course_item2">#00a1c6</color>
+    <color name="message_course_item3">#ff860f</color>
+    <color name="message_course_item4">#c00071</color>
+    <color name="message_course_item5">#0072c6</color>
+    <color name="message_course_item6">#00990f</color>
+    <color name="message_course_item7">#54d8c8</color>
+    <color name="message_course_item8">#ff2929</color>
+
+    <!-- 维修 -->
+    <color name="repair_status_waiting">#FF860F</color>
+    <color name="repair_status_end">#00990F</color>
+    <color name="repair_status_reject">#CC1B1B</color>
+    <color name="repair_status_cancel">#C00071</color>
+
+    <!-- launch -->
+    <color name="launch_bg_color">#00334d</color>
+
+    <!-- 失物招领-->
+    <color name="lost_text_book">#54D8C8</color>
+    <color name="lost_text_wallet">#FF5252</color>
+    <color name="lost_text_others">#737373</color>
+    <color name="lost_text_bank_card">#FF860F</color>
+    <color name="lost_text_id_card">#005999</color>
+    <color name="lost_text_campus_card">#00A1C6</color>
+
+    <color name="lost_add_bg">#f8f8f8</color>
+    <color name="lost_add_border">#d9d9d9</color>
+
+    <!-- 成绩查询 -->
+    <color name="scores_header_bg">#737373</color>
+</resources>

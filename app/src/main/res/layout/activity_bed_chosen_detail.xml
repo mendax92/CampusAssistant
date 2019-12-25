@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_xs"
+            android:background="@color/common_orange"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:text="@string/bedroom_chosen_tip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_s" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/common_margin_xs"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:paddingRight="@dimen/common_margin_s"
+            android:paddingTop="@dimen/common_margin_xs">
+
+            <ImageView
+                android:id="@+id/bedroom_img"
+                android:layout_width="@dimen/bed_select_img_width"
+                android:layout_height="@dimen/bed_select_img_height"
+                android:layout_marginRight="@dimen/common_margin_xs"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_img_rectangle_default" />
+
+            <TextView
+                android:id="@+id/bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/bedroom_img"
+                android:textColor="@color/text_main_color"
+                android:textSize="@dimen/common_text_m" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bedroom"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:layout_toRightOf="@id/bedroom_img"
+                android:textColor="@color/text_gray_xdark_color"
+                android:textSize="@dimen/common_text_s" />
+
+            <TextView
+                android:id="@+id/bedroom_type"
+                style="@style/MainText"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/bedroom_img" />
+
+        </RelativeLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/student_no"
+                style="@style/MainText"
+                android:layout_marginTop="@dimen/common_margin_s"
+                android:text="@string/bedroom_student_no" />
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="@dimen/bed_qr_code"
+                android:layout_height="@dimen/bed_qr_code"
+                android:layout_marginBottom="@dimen/common_margin_xs"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_xl"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/pay_finance_tel_label"
+                style="@style/MainText"
+                android:text="@string/bedroom_student_service_call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_finance_tel_label"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:text="@string/pay_finance_time"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="@dimen/common_icon_size"
+                android:layout_height="@dimen/common_icon_size"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/common_btn_opera_call" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginBottom="@dimen/common_margin_xs" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/photo_picker_pager_bg" />
+
+    <FrameLayout
+        android:id="@+id/iv_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/iv_check_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/photo_picker_item_directory_padding"
+            android:paddingRight="@dimen/photo_picker_item_directory_padding">
+
+            <ImageView
+                android:id="@+id/iv_check_view"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:filterTouchesWhenObscured="true"
+                android:src="@drawable/photo_picker_checkbox_bg" />
+
+            <TextView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:text="@string/photo_picker_check"
+                android:textColor="?attr/actionMenuTextColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

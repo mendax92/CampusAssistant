@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/bed_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/common_margin_xxs">
+
+        <ImageView
+            android:id="@+id/bed_img"
+            android:layout_width="@dimen/bed_choose_img_size"
+            android:layout_height="@dimen/bed_choose_img_size"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_bed_choose_normal" />
+
+        <TextView
+            android:id="@+id/bed_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="22dp"
+            android:textSize="@dimen/common_text_xs" />
+
+    </FrameLayout>
+</merge>

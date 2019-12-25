@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/course_icon_size"
+            android:layout_height="@dimen/course_icon_size"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_course_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:text="@string/course_label"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <TextView
+            android:id="@+id/course_name"
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_xs"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/course_icon_size"
+                android:layout_height="@dimen/course_icon_size"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_course_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:text="@string/course_classroom"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/course_classroom"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/course_icon_size"
+                android:layout_height="@dimen/course_icon_size"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_course_teacher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:text="@string/course_teacher"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/course_teacher"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/course_icon_size"
+                android:layout_height="@dimen/course_icon_size"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_course_lesson" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:text="@string/course_lesson"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/course_lesson"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/course_icon_size"
+                android:layout_height="@dimen/course_icon_size"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_course_weeks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:text="@string/course_weeks"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/course_weeks"
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_s"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+    </LinearLayout>
+
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <TextView
+        android:id="@+id/course_error_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/course_has_error"
+        android:textColor="@color/text_blue_color"
+        android:textSize="@dimen/common_text_n" />
+
+    <View style="@style/MainHorizontalLine" />
+</LinearLayout>

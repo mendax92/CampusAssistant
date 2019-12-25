@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_margin_s">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_year" />
+
+            <TextView
+                android:id="@+id/score_year"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_semester" />
+
+            <TextView
+                android:id="@+id/semester"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_course_type" />
+
+            <TextView
+                android:id="@+id/course_type"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_course_name" />
+
+            <TextView
+                android:id="@+id/course_name"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_course_teacher" />
+
+            <TextView
+                android:id="@+id/course_teacher"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/scores_type" />
+
+            <TextView
+                android:id="@+id/score_type"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/score_usually" />
+
+            <TextView
+                android:id="@+id/score_usually"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/score_of_term" />
+
+            <TextView
+                android:id="@+id/score_of_term"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/score_of_total" />
+
+            <TextView
+                android:id="@+id/score_total"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/score_of_retest" />
+
+            <TextView
+                android:id="@+id/score_retest"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/score_of_rebuild" />
+
+            <TextView
+                android:id="@+id/score_rebuild"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_m"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingRight="@dimen/common_margin_s"
+                android:text="@string/score_of_credits" />
+
+            <TextView
+                android:id="@+id/score_credits"
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+    </LinearLayout>
+</ScrollView>

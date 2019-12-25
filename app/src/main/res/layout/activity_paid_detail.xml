@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_pick_img_height"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/pay_trade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_xs"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/pay_status"
+                android:layout_width="@dimen/pay_status_width"
+                android:layout_height="@dimen/pay_status_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/common_margin_xs"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_text_xs" />
+
+            <TextView
+                android:id="@+id/pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/common_text_xxl" />
+        </RelativeLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/user_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:gravity="center_vertical"
+                android:text="@string/pay_user_name"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_below="@+id/user_name_label" />
+
+            <TextView
+                android:id="@+id/student_no_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_below="@+id/user_name_label"
+                android:gravity="center_vertical"
+                android:text="@string/pay_student_no"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/student_no"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/student_no_label"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_below="@+id/student_no_label" />
+
+            <TextView
+                android:id="@+id/user_grade_class_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_below="@+id/student_no_label"
+                android:gravity="center_vertical"
+                android:text="@string/pay_class"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/user_grade_class"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/user_grade_class_label"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_below="@+id/user_grade_class_label" />
+
+            <TextView
+                android:id="@+id/pay_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_below="@+id/user_grade_class_label"
+                android:gravity="center_vertical"
+                android:text="@string/pay_type"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/pay_type_label"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_below="@+id/pay_type_label" />
+
+            <TextView
+                android:id="@+id/order_no_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_below="@+id/pay_type_label"
+                android:gravity="center_vertical"
+                android:text="@string/pay_order_no"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/order_no_label"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_below="@+id/order_no_label" />
+
+            <TextView
+                android:id="@+id/pay_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_below="@+id/order_no_label"
+                android:gravity="center_vertical"
+                android:text="@string/pay_time"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <TextView
+                android:id="@+id/pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_item_height_m"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/pay_time_label"
+                android:layout_marginRight="@dimen/common_margin_s"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+        </RelativeLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginTop="@dimen/common_margin_xs" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height_xl"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin_s"
+            android:paddingRight="@dimen/common_margin_s">
+
+            <TextView
+                android:id="@+id/pay_finance_tel_label"
+                style="@style/MainText"
+                android:text="@string/pay_finance_tel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_finance_tel_label"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:text="@string/pay_finance_time"
+                android:textColor="@color/text_gray_dark_color"
+                android:textSize="@dimen/common_text_n" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="@dimen/common_icon_size"
+                android:layout_height="@dimen/common_icon_size"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/common_btn_opera_call" />
+        </RelativeLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginBottom="@dimen/common_margin_xs" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

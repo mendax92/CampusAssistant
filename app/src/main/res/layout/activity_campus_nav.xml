@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/loc_target"
+        android:layout_width="@dimen/location_img_size"
+        android:layout_height="@dimen/location_img_size"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="@dimen/common_margin_normal"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:src="@drawable/location_img_target" />
+
+    <ImageView
+        android:id="@+id/loc_current"
+        android:layout_width="@dimen/location_img_size"
+        android:layout_height="@dimen/location_img_size"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/common_margin_normal"
+        android:layout_marginRight="@dimen/common_margin_normal"
+        android:src="@drawable/location_img_loc" />
+
+</FrameLayout>

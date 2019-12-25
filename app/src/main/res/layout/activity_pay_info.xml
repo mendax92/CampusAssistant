@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_simple_header" />
+
+            <View style="@style/MainHorizontalLine" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin_xs" />
+
+            <View style="@style/MainHorizontalLine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height_s"
+                android:background="@color/windowBackground_sub"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin_s"
+                android:paddingRight="@dimen/common_margin_s"
+                android:text="@string/pay_item"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/common_text_s" />
+
+            <View style="@style/MainHorizontalLine" />
+
+            <LinearLayout
+                style="@style/MainItem"
+                android:background="@color/white"
+                android:paddingRight="@dimen/common_margin_s">
+
+                <TextView
+                    android:id="@+id/pay_title"
+                    style="@style/MainText"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/pay_money"
+                    style="@style/MainText" />
+
+            </LinearLayout>
+
+            <View style="@style/MainHorizontalLine" />
+
+            <com.zhiqi.campusassistant.common.ui.widget.PayCheckGroupView
+                android:id="@+id/pay_check_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View style="@style/MainHorizontalLine" />
+
+        <Button
+            android:id="@+id/pay_confirm"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_marginBottom="@dimen/common_margin_xs"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_marginRight="@dimen/common_margin_normal"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:enabled="false"
+            android:text="@string/pay_confirm_simple" />
+    </LinearLayout>
+
+</LinearLayout>

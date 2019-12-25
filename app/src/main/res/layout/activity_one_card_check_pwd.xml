@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/pwd_tip"
+        style="@style/MainText"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/common_margin_normal"
+        android:layout_marginTop="@dimen/one_card_pwd_tip_margin"
+        android:text="@string/one_card_open_pwd_tip" />
+
+    <com.zhiqi.campusassistant.common.ui.widget.CodeView
+        android:id="@+id/pwd_code"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/one_card_pwd_size"
+        android:layout_below="@+id/pwd_tip"
+        android:layout_centerHorizontal="true"
+        app:dividerPadding="@dimen/common_margin_xs"
+        app:gridDrawable="@drawable/one_card_pwd_bg" />
+
+    <com.zhiqi.campusassistant.common.ui.widget.NumberKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_line_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/common_content_selector"
+        android:keyTextColor="@color/black"
+        android:paddingTop="@dimen/common_line_size_m"
+        android:shadowColor="@color/transparent"
+        android:shadowRadius="0"
+        app:deleteBackground="@drawable/common_content_sub_selector"
+        app:deleteDrawable="@drawable/ic_keyboard_backspace"
+        app:deleteWidth="22dp" />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/text_link_color" />
+                    <corners android:bottomLeftRadius="@dimen/common_radius_xs" android:topLeftRadius="@dimen/common_radius_xs" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:bottom="@dimen/common_line_size_m" android:left="@dimen/common_line_size_m" android:top="@dimen/common_line_size_m">
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:bottomLeftRadius="@dimen/common_radius_xs" android:topLeftRadius="@dimen/common_radius_xs" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/common_line_color" />
+                    <corners android:bottomLeftRadius="@dimen/common_radius_xs" android:topLeftRadius="@dimen/common_radius_xs" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:bottom="@dimen/common_line_size_m" android:left="@dimen/common_line_size_m" android:top="@dimen/common_line_size_m">
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:bottomLeftRadius="@dimen/common_radius_xs" android:topLeftRadius="@dimen/common_radius_xs" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

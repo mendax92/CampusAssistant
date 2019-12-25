@@ -1,0 +1,450 @@
+<resources>
+    <string name="app_name">云间校园</string>
+    <string name="char_z">z</string>
+
+    <!-- 公用模块 -->
+    <string name="common_message">消息</string>
+    <string name="common_app">应用</string>
+    <string name="common_mine">我的</string>
+    <string name="common_course">课程表</string>
+    <string name="common_me">我</string>
+    <string name="common_today">今天</string>
+    <string name="common_add">添加</string>
+
+    <string name="common_next">下一步</string>
+
+    <string name="common_leave_apply">请假申请</string>
+    <string name="common_leave_approval">请假审批</string>
+    <string name="common_repair_apply">报修申请</string>
+    <string name="common_repair_approval">报修受理</string>
+    <string name="common_information">校园资讯</string>
+    <string name="common_card">校园卡充值</string>
+    <string name="common_address_list">通讯录</string>
+    <string name="common_discribe_function">功能介绍</string>
+    <string name="common_details">详情</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_submit">提交</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_complete">完成</string>
+    <string name="common_date_format_minute">yyyy年MM月dd HH:mm</string>
+    <string name="common_nothing">无</string>
+    <string name="common_failed">失败</string>
+    <string name="common_about">软件</string>
+    <string name="common_save">保存</string>
+    <string name="common_delete">删除</string>
+    <string name="common_confirm_delete">确认删除</string>
+    <string name="common_no_data">暂时还没有最新数据</string>
+    <string name="common_more">更多</string>
+
+    <string name="common_show_details">显示详情</string>
+    <string name="common_two_string">%1$s%2$s</string>
+
+
+    <string name="common_commit_ing">正在提交&#8230;</string>
+    <string name="common_update_ing">正在更新&#8230;</string>
+    <string name="common_update_success">更新成功</string>
+    <string name="common_update_failed">更新失败</string>
+    <string name="common_loading">正在加载&#8230;</string>
+
+
+    <string name="common_prompt">提示</string>
+
+    <!-- 公用提示 -->
+    <string name="common_tip_permission">权限错误</string>
+    <string name="common_tip_goto_appsetting1">未获取到应用%s权限，为方便您正常使用，请到应用-权限管理中授权</string>
+    <string name="common_tip_goto_appsetting2">应用可能被禁止了%s权限，为方便您正常使用，请在系统或第三方的应用权限管理中开启对应权限</string>
+    <string name="common_tip_no_network">当前无网络连接，请检查网络</string>
+    <string name="common_tip_network_error">网络异常，请稍后再试</string>
+    <string name="common_tip_server_no_result">服务器无响应数据</string>
+    <string name="common_i_know">我知道了</string>
+    <string name="common_goto_setting">去设置</string>
+
+    <!-- 登录模块 -->
+    <string name="login">登录</string>
+    <string name="logout">退出</string>
+    <string name="login_rule_tip"><Data><![CDATA[一旦登录，即表明你同意 云间校园 的 <font color="#737373">
+    <a href="%1$s" style="text-decoration:none;">隐私政策</a></font> 和
+    <font color="#737373"><a href="%2$s" style="text-decoration:none;">使用条款</a></font>]]> </Data></string>
+    <string name="login_account_hint">身份证号</string>
+    <!--<string name="login_account_hint">手机号/考生号/学号</string>-->
+    <string name="login_password">密码</string>
+    <string name="login_ing">正在登录&#8230;</string>
+    <string name="login_success">登录成功</string>
+    <string name="logout_ing">正在退出&#8230;</string>
+
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_forget_has_question">遇到问题？</string>
+    <string name="login_phone">手机号</string>
+    <string name="login_phone_hint">请输入您的手机号</string>
+    <string name="login_support_describe">目前只支持绑定了手机号的用户，通过手机号找回密码。</string>
+
+    <string name="login_area_info">%1$s(%2$s)</string>
+    <string name="login_phone_whole">%1$s(%2$s)&#160;%3$s</string>
+    <string name="login_verify_fill_code">填写验证码</string>
+    <string name="login_verify_code">验证码</string>
+    <string name="login_verify_resend">重发</string>
+    <string name="login_verify_resend_count">重发(%1$d)</string>
+    <string name="login_verify_code_has_send">验证码已发送到手机</string>
+    <string name="login_verify_code_hint">请填写验证码</string>
+    <string name="login_tip_pwd_not_same">新密码和确认密码不一致</string>
+    <string name="login_verify_has_question">收不到验证码？</string>
+    <string name="login_pwd_old_new_same">新旧密码一致，请重新设置密码</string>
+
+    <string name="login_pwd_reset">重置密码</string>
+    <string name="login_pwd_new">新密码</string>
+    <string name="login_pwd_confirm">确认密码</string>
+    <string name="login_pwd_input_hint">请输入新密码</string>
+    <string name="login_pwd_confirm_hint">请再次输入新密码</string>
+    <string name="login_pwd_limit">密码为字母和数字的组合，至少6位。</string>
+    <string name="login_pwd_old">旧密码</string>
+    <string name="login_pwd_old_input_hint">请输入旧密码</string>
+
+    <string name="login_area_choice">请选择国家或地区</string>
+
+    <!-- 用户模块 -->
+    <string name="user_name_label">姓名</string>
+    <string name="user_student_number">学号</string>
+    <string name="user_staff_number">工号</string>
+    <string name="user_department">院系</string>
+    <string name="user_staff_department">部门或院系</string>
+    <string name="user_grade_class">专业及班级</string>
+    <string name="user_position">职位</string>
+
+    <string name="user_nav_account">手机账号</string>
+    <string name="user_nav_bind_phone">绑定手机号</string>
+    <string name="user_nav_help">帮助中心</string>
+    <string name="user_nav_feedback">用户反馈</string>
+    <string name="user_nav_about">关于软件</string>
+    <string name="user_nav_setting">设置</string>
+
+    <string name="user_help_online">客服热线</string>
+    <string name="user_help_work_time">9:00&#8211;18:00\n我们的客服员工将竭</string>
+    <string name="user_help_call_service">致电客服</string>
+    <string name="user_help_question">常见问题</string>
+    <string name="user_help_forget_account">忘记账号?</string>
+    <string name="user_help_forget_pwd">忘记密码?</string>
+    <string name="user_help_bind_no_verify">手机绑定收不到验证码？</string>
+
+    <string name="user_feedback_select_type">选择反馈类型</string>
+    <string name="user_feedback_product_suggest">产品建议</string>
+    <string name="user_feedback_app_error">程序错误</string>
+    <string name="user_feedback_others">其他反馈</string>
+    <string name="user_feedback_area_tip">%1$d/200</string>
+    <string name="user_feedback_contact_hint">手机号或邮箱或QQ</string>
+    <string name="user_feedback_area_hint">请输入反馈，我们将为您不断改变</string>
+
+    <string name="user_about_grade">给软件评分</string>
+    <string name="user_about_version">V%s</string>
+    <string name="user_about_current_version">当前版本</string>
+
+    <string name="user_setting_account_safe">账号与安全</string>
+    <string name="user_setting_message_notice">新消息通知</string>
+    <string name="user_setting_clear_cache">清除缓存数据</string>
+    <string name="user_setting_clear_ing">正在清除缓存数据</string>
+    <string name="user_setting_clear_success">清除缓存数据成功</string>
+    <string name="user_setting_clear_failed">清除缓存数据失败</string>
+
+    <string name="user_setting_change_pwd">修改密码</string>
+    <string name="user_setting_change_pay_pwd">修改支付密码</string>
+    <string name="user_setting_reset_pay_pwd">重置支付密码</string>
+    <string name="user_setting_pay_old_pwd">原密码</string>
+    <string name="user_setting_pay_old_pwd_tip">请输入原支付密码</string>
+    <string name="user_setting_pay_new_pwd_tip">请输入新支付密码</string>
+    <string name="user_setting_pay_pwd_again_tip">请再次输入新支付密码</string>
+    <string name="user_setting_pay_pwd_input_tip">支付密码由6位数字组成</string>
+
+    <string name="user_account_phone">手机账号</string>
+    <string name="user_change_phone">更换手机号</string>
+    <string name="user_change_phone_info">当前手机号：%s</string>
+    <string name="user_bind_phone">手机号绑定</string>
+    <string name="user_change_phone_tip">此号码将显示在个人信息中，你也\n可以使用此手机号登录</string>
+    <string name="user_go_to_bind_phone">去绑定</string>
+    <string name="user_fill_verify_code">填写验证码</string>
+
+    <string name="user_pay_change_pwd">修改支付密码</string>
+    <string name="user_pay_reset_pwd">重置支付密码</string>
+
+    <string name="user_introduce_function">功能介绍</string>
+
+    <!-- 支付模块 -->
+    <string name="pay_card_balance">卡内余额</string>
+    <string name="pay_select_money">请选择充值金额</string>
+    <string name="pay_wxpay">微信支付</string>
+    <string name="pay_alipay">支付宝支付</string>
+    <string name="pay_union">银联支付</string>
+    <string name="pay_apple">Apple支付</string>
+    <string name="pay_wxpay_tip">建议只用最新版的微信进行支付</string>
+    <string name="pay_alipay_tip">建议只用最新版的支付宝进行支付</string>
+    <string name="pay_moeney_describe">实付:%s</string>
+    <string name="pay_confirm_simple">确认支付</string>
+    <string name="pay_confirm_whole">确认支付 %s</string>
+    <string name="pay_history">充值记录</string>
+    <string name="pay_money">充值金额</string>
+
+    <!-- 通讯录 -->
+    <string name="contacts_department_user">部门/联系人</string>
+    <string name="contacts_user_phone">手机</string>
+    <string name="contacts_user_tel">座机</string>
+    <string name="contacts_user_email">邮箱</string>
+    <string name="contacts_user_info">个人信息</string>
+    <string name="contacts_short_number">短号</string>
+
+    <!-- 课程表 -->
+    <string name="course_detail">课程详情</string>
+    <string name="course_week">第%d周</string>
+    <string name="course_current_week">第%d周(本周)</string>
+    <string name="course_no_current_week">第%d周(非本周)</string>
+    <string name="course_day_week">周%s</string>
+    <string name="course_lesson_detail">%1$d&#8211;%2$d&#160;节</string>
+    <string name="course_month">%d月</string>
+    <string name="course_show">%1$s@%2$s</string>
+    <string name="course_label">课程</string>
+    <string name="course_classroom">教室</string>
+    <string name="course_teacher">教师</string>
+    <string name="course_lesson">节数</string>
+    <string name="course_weeks">周数</string>
+    <string name="course_weeks_start_end">%1$d&#8211;%2$d周</string>
+    <string name="course_has_error">课程信息有误？</string>
+    <string name="course_no_schedule">暂时还没有课程</string>
+
+    <!-- 校园资讯 -->
+    <string name="news_describe">%1$s&#160;&#160;&#160;&#160;%2$s</string>
+    <string name="news_empty_information">暂时还没有校园资讯</string>
+
+    <!-- 请假模块 -->
+    <string name="leave_apply">请假申请</string>
+    <string name="leave_history_list">请假记录</string>
+    <string name="leave_describe">%1$s&#160;(共计%2$s天)</string>
+    <string name="leave_data_content">%1$s&#160;&#8211;&#160;%2$s</string>
+    <string name="leave_date_label">请假时间:&#160;</string>
+    <string name="leave_department_label">所在部门:&#160;</string>
+    <string name="leave_reason_label">请假事由:&#160;</string>
+    <string name="leave_operate_agree">同意</string>
+    <string name="leave_operate_wait">等待</string>
+    <string name="leave_operate_reject">驳回</string>
+    <string name="leave_operate_cancel">撤销</string>
+    <string name="leave_department">所在部门</string>
+    <string name="leave_reason">请假事由</string>
+    <string name="leave_date">请假时间</string>
+
+    <string name="leave_apply_me">我要请假</string>
+    <string name="leave_details">请假详情</string>
+    <string name="leave_type">请假类型</string>
+    <string name="leave_start_time">开始时间</string>
+    <string name="leave_end_time">结束时间</string>
+    <string name="leave_sum_date">请假天数</string>
+    <string name="leave_apply_reason">请假事由\n(必填)</string>
+    <string name="leave_sum_date_hint">请输入请假天数(必填)</string>
+    <string name="leave_reason_hint">请输入请假事由</string>
+    <string name="leave_empty_apply">暂时还没有请假申请</string>
+    <string name="leave_empty_approval">暂时还没有请假审批</string>
+    <string name="leave_progress">请假进度</string>
+    <string name="leave_time_tip">结束时间应该大于开始时间</string>
+    <string name="leave_reject_dialog_title">驳回请假单</string>
+    <string name="leave_reject_input_hint">请输入驳回原因（必填）</string>
+    <string name="leave_agree_dialog_title">同意请假单</string>
+    <string name="leave_cancel_dialog_title">取消请假单</string>
+    <string name="leave_comment_input_hint">备注信息(选填)</string>
+    <string name="leave_remark_label">备注信息:&#160;%1$s</string>
+    <string name="leave_wait_status">等待%s审批</string>
+
+    <string name="leave_approval_student">学生请假审批</string>
+    <string name="leave_approval_employee">员工请假审批</string>
+
+    <!-- 维修 -->
+    <string name="repair_apply">报修申请</string>
+    <string name="repair_details">报修详情</string>
+    <string name="repair_detail_label">故障描述:&#160;</string>
+    <string name="repair_appointment_time_label">预约时间:&#160;</string>
+    <string name="repair_area_label">故障区域:&#160;</string>
+    <string name="repair_operate_assign">分配人员</string>
+    <string name="repair_empty_apply">暂时还没有物品报修</string>
+    <string name="repair_empty_approval">暂时还没有报修受理</string>
+    <string name="repair_applicant_title">常用报修信息</string>
+
+    <string name="repair_apply_me">我要报修</string>
+    <string name="repair_history_list">报修记录</string>
+    <string name="repair_project">维修项目</string>
+    <string name="repair_describe">故障描述\n(选填)</string>
+    <string name="repair_describe_hint">请尽量详细填写故障描述</string>
+    <string name="repair_user_info">报修人信息</string>
+    <string name="repair_user_info_describe">常用报修信息</string>
+    <string name="repair_user_name_label">姓&#160;&#160;&#160;&#160;名</string>
+    <string name="repair_user_name_hint">请尽量填写真实名字</string>
+    <string name="repair_contact_number">联系方式</string>
+    <string name="repair_contact_hint">手机号码或者座机号</string>
+    <string name="repair_campus_area_label">所属校区</string>
+    <string name="repair_campus_area_hint">请选择所属校区(必填)</string>
+    <string name="repair_break_area_label">故障区域</string>
+    <string name="repair_break_area_hint">请选择故障区域和楼宇(必填)</string>
+    <string name="repair_location_label">详细位置</string>
+    <string name="repair_location_hint">楼层以及室(必填)</string>
+    <string name="repair_appointment_time">预约时间</string>
+    <string name="repair_appointment_time_hint">可预约维修时间(选填)</string>
+    <string name="repair_select_campus">请先选择所属校区！</string>
+    <string name="repair_no_label">报修单号</string>
+    <string name="repair_malfunction_describe">故障描述</string>
+    <string name="repair_contact_number_label">联系方式:&#160;</string>
+    <string name="repair_progress">维修进度</string>
+    <string name="repair_address_concat">%1$s&#160;%2$s&#160;%3$s</string>
+    <string name="repair_reject_dialog_title">取消维修单</string>
+    <string name="repair_reject_input_hint">请输入取消原因（必填）</string>
+    <string name="repair_appointment_error">预约时间不能小于当前时间</string>
+
+    <!-- 申请 -->
+    <string name="apply_status_label">状态:&#160;</string>
+    <string name="apply_apply_date">于%1$s&#160;申请</string>
+    <string name="apply_choice_hint">请选择（必填）</string>
+    <string name="apply_approval_user">审批人</string>
+    <string name="apply_data_invalid">更新</string>
+
+    <!-- 上传 -->
+    <string name="upload_failed_tip">提交申请失败，请检查网络！</string>
+    <string name="upload_retry">重试</string>
+
+    <!-- 导航 -->
+    <string name="nav_module_leave">请假与审批</string>
+    <string name="nav_module_leave_tip">轻松请假&#160;一键审批</string>
+    <string name="nav_module_repair">报修与维修</string>
+    <string name="nav_module_repair_tip">实时报修&#160;维修受理</string>
+    <string name="nav_module_course">课程表</string>
+    <string name="nav_module_course_tip">查阅课程&#160;尽在掌握</string>
+
+    <!-- 相片 -->
+    <string name="photo_camera_error">拍照出错，请检查相机或存储空间！</string>
+    <string name="photo_choose_error">选择照片出错！</string>
+
+    <!-- 通知公告 -->
+    <string name="notice_title">通知公告</string>
+
+    <!-- 失物招领 -->
+    <string name="lost_type_found">捡到</string>
+    <string name="lost_type_lost">丢失</string>
+    <string name="lost_found_title">失物招领</string>
+    <string name="lost_my_title">我的失物招领</string>
+    <string name="lost_bind_phone">请先绑定手机号</string>
+    <string name="lost_apply_title">发布失物招领</string>
+    <string name="lost_apply_type_label">发布类型</string>
+    <string name="lost_type_label">失物类型</string>
+    <string name="lost_card_no">证件卡号</string>
+    <string name="lost_describe">失物描述\n(必填)</string>
+    <string name="lost_card_no_hint">请输入证件号或卡号(选填)</string>
+    <string name="lost_describe_hint">请输入失物描述，比如:长得什么样，卡号多少等等</string>
+
+    <!-- 成绩查询 -->
+    <string name="scores_title">成绩查询</string>
+    <string name="scores_course_name">课程名称</string>
+    <string name="scores_label">成绩</string>
+    <string name="scores_credit_label">学分</string>
+
+    <string name="scores_details_title">成绩详情</string>
+    <string name="scores_year">学年</string>
+    <string name="scores_semester">学期</string>
+    <string name="scores_course_type">课程类型</string>
+    <string name="scores_course_teacher">任课老师</string>
+    <string name="scores_type">考核方式</string>
+    <string name="score_usually">平时成绩</string>
+    <string name="score_of_term">期末成绩</string>
+    <string name="score_of_total">总评成绩</string>
+    <string name="score_of_retest">补考成绩</string>
+    <string name="score_of_rebuild">重修成绩</string>
+    <string name="score_of_credits">应得学分</string>
+
+    <!-- 自助支付-->
+    <string name="pay_self">自助缴费</string>
+    <string name="pay_exception">支付失败，请重新支付！</string>
+    <string name="pay_cancel">您已经取消支付！</string>
+    <string name="pay_un_support">您尚未安装微信或者微信版本过低</string>
+    <string name="pay_wait_pay">待缴费用</string>
+    <string name="pay_detail">缴费明细</string>
+    <string name="pay_choice_list">缴费选项</string>
+    <string name="pay_item">收费项目</string>
+    <string name="pay_title">缴费支付</string>
+    <string name="pay_ing">正在支付</string>
+    <string name="pay_do_not_support">功能正在开发中，请耐心等待&#8230;</string>
+    <string name="pay_payment_voucher">缴费凭证</string>
+    <string name="pay_opera_details">显示详情</string>
+    <string name="pay_trade_name">缴费项目</string>
+    <string name="pay_trade_money">缴费金额</string>
+    <string name="pay_status">缴费状态</string>
+    <string name="pay_to_pay">去支付</string>
+    <string name="pay_details">缴费详情</string>
+    <string name="pay_finance_tel">财务处服务电话</string>
+    <string name="pay_finance_time">工作时间：9:00~18:00</string>
+    <string name="pay_user_name">缴费人姓名</string>
+    <string name="pay_student_no">缴费人学号</string>
+    <string name="pay_class">缴费人班级</string>
+    <string name="pay_type">支付方式</string>
+    <string name="pay_order_no">缴费单号</string>
+    <string name="pay_time">缴费时间</string>
+
+    <!-- 定位 -->
+    <string name="location_campus_navigate">校园指引</string>
+    <string name="location_error_msg">定位失败！</string>
+    <string name="location_no_permission">缺少定位权限！</string>
+    <string name="location_setting_permission">未获取到应用定位权限，为方便您正常使用，请到应用-权限管理中授权</string>
+
+    <!-- 版本更新 -->
+    <string name="version_upgrade_title">版本更新</string>
+    <string name="version_upgrade_error">版本更新失败，请检查手机存储和网络连接</string>
+    <string name="version_upgrade_permission_error">版本更新失败，请授权应用安装权限</string>
+    <string name="version_upgrade">升级</string>
+
+    <!-- 报到指南 -->
+    <string name="entrance_title">报到指南</string>
+    <string name="entrance_step">报到步骤</string>
+    <string name="entrance_step_1">第一步：自助缴费</string>
+    <string name="entrance_step_2">第二步：选择床位</string>
+    <string name="entrance_step_3">第三步：领取军训服</string>
+
+    <!-- 选择床位 -->
+    <string name="bedroom_select">选择床位</string>
+    <string name="bedroom_i_choose">我要选位</string>
+    <string name="bedroom_choose">选位</string>
+    <string name="bedroom_choose_enable">可选</string>
+    <string name="bedroom_choose_been">已选择</string>
+    <string name="bedroom_choose_checked">选中</string>
+    <string name="bedroom_window_balcony_toilet">窗户·阳台·卫生间</string>
+    <string name="bedroom_door_window">房门·窗户</string>
+    <string name="bedroom_choose_confirm">确认选位</string>
+    <string name="bedroom_chosen_tip">通过【自助缴费】-【缴费明细】可查询缴费相关信息</string>
+    <string name="bedroom_student_no">学号或考生号：%s</string>
+    <string name="bedroom_student_service_call">学生处服务电话</string>
+    <string name="bedroom_chosen_detail">床位详情</string>
+
+    <!-- 一卡通 -->
+    <string name="one_card_pay_qr">付款码</string>
+    <string name="one_card_balance">余额</string>
+    <string name="one_card_electric_top">电费充值</string>
+    <string name="one_card_campus">校园卡</string>
+    <string name="one_card_coming_tip">即将上线</string>
+    <string name="one_card_account_balance">账户余额</string>
+    <string name="one_card_top_up">充值</string>
+    <string name="one_card_detail">明细</string>
+    <string name="one_card_money">¥&#160;%1$s</string>
+    <string name="one_card_balance_rmb">余额:&#160;%1$s</string>
+    <string name="one_card_payment_rate_tip">服务费&#040;充值金额的%1$s%%&#041;</string>
+    <string name="one_card_pay_limit_tip">账户余额上限为%1$s元，暂无可供充值的金额选择。</string>
+    <string name="one_card_account_detail">账户明细</string>
+    <string name="one_card_top_up_type">充值类型</string>
+    <string name="one_card_account_money">账户余额充值</string>
+    <string name="one_card_payment_certificate">支付凭证</string>
+    <string name="one_card_payment_amount">支付金额</string>
+    <string name="one_card_amount_type">类型</string>
+    <string name="one_card_order_no">订单号</string>
+    <string name="one_card_remark">备注</string>
+    <string name="one_card_pay_to_business">向商家付款</string>
+    <string name="one_card_qr_open">立即开启</string>
+    <string name="one_card_not_open_tip">你未开启付款功能，开启后向商家初始付款码即可完成快速支付</string>
+    <string name="one_card_not_release_tip">饭堂二维码支付已上线试运行，将逐步对全校师生开放！</string>
+    <string name="one_card_auto_update_tip">付款码每5分钟自动更新/点击此二维码立即更新</string>
+    <string name="one_card_qr_code">付款码</string>
+    <string name="one_card_qr_generate_error">付款码异常</string>
+    <string name="one_card_open_qr_payment">开启付款码</string>
+    <string name="one_card_open_pwd_tip">请设置支付密码，用于支付验证</string>
+    <string name="one_card_open_pwd_confirm_tip">请再次输入以确认</string>
+    <string name="one_card_verify_pwd_tip">请输入支付密码，以验证身份</string>
+    <string name="one_card_confirm_pwd_error">密码不一致，请重新确认密码</string>
+    <string name="one_card_verify_pwd_ing">正在验证&#8230;</string>
+    <string name="one_card_bind_phone_tip">为保证您账号资金安全，请先绑定手机号</string>
+</resources>

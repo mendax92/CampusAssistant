@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bedroom_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_content_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_margin_xs"
+        android:paddingLeft="@dimen/common_margin_s"
+        android:paddingRight="@dimen/common_margin_s"
+        android:paddingTop="@dimen/common_margin_xs">
+
+        <ImageView
+            android:id="@+id/bedroom_img"
+            android:layout_width="@dimen/bed_select_img_width"
+            android:layout_height="@dimen/bed_select_img_height"
+            android:layout_marginRight="@dimen/common_margin_xs"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_img_rectangle_default" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_main_color"
+                android:textSize="@dimen/common_text_m" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/common_margin_xxs"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_gray_xdark_color"
+                android:textSize="@dimen/common_text_s" />
+
+            <TextView
+                android:id="@+id/bedroom_type"
+                style="@style/MainText" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/choose"
+            style="@style/MainButton"
+            android:layout_width="@dimen/common_item_height_l"
+            android:layout_height="@dimen/common_item_height_xs"
+            android:layout_marginLeft="@dimen/common_margin_xs"
+            android:gravity="center"
+            android:text="@string/bedroom_choose" />
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+</LinearLayout>

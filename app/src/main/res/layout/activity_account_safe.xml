@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:id="@+id/change_pwd"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <TextView
+            style="@style/MainText"
+            android:layout_weight="1"
+            android:text="@string/user_setting_change_pwd" />
+
+        <ImageView
+            style="@style/NextIcon"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:id="@+id/change_pay_pwd"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <TextView
+            style="@style/MainText"
+            android:layout_weight="1"
+            android:text="@string/user_setting_change_pay_pwd" />
+
+        <ImageView
+            style="@style/NextIcon"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginLeft="@dimen/common_margin_s" />
+
+    <LinearLayout
+        android:id="@+id/reset_pay_pwd"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <TextView
+            style="@style/MainText"
+            android:layout_weight="1"
+            android:text="@string/user_setting_reset_pay_pwd" />
+
+        <ImageView
+            style="@style/NextIcon"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+</LinearLayout>

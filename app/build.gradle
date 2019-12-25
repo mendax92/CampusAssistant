@@ -1,0 +1,225 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+
+def channels = ["apptest", "office", "tencent", "app360",
+                "baidu", "xiaomi", "huawei", "oppo",
+                "google", "wandoujia", "vivo", "hiapp",
+                "anzhi", "app91", "sunsung", "woapp", "ztems"]
+
+def appInfos = [
+        [appName: "official", jpushAppKey: "b561ee3321360052f7d9e0f4", sourceRoot: "src/official"],
+        [appName: "gdgsxy", appIdSuffix: "gdgsxy", jpushAppKey: "30a9e696fb0e70c3c687b70e", sourceRoot: "src/gdgsxy"]
+]
+
+android {
+    compileSdkVersion gradle.appCompileSdkVersion
+
+    def appId = "com.zhiqi.campusassistant"
+
+    defaultConfig {
+        applicationId appId
+        minSdkVersion gradle.appMinSdkVersion
+        targetSdkVersion gradle.appTargetSdkVersion
+        versionCode gradle.appVersionCode
+        versionName gradle.appVersionName
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'arm64-v8a'
+            // 还可以添加 'mips', 'mips64'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            //signconfig
+            keyAlias 'zhiqi'
+            keyPassword 'zhiqi_qwer@2017'
+            storeFile file('../../KeyStore.jks')
+            storePassword 'zhiqi_qwer@2017'
+        }
+
+        release {
+            //signconfig
+            keyAlias 'zhiqi'
+            keyPassword 'zhiqi_qwer@2017'
+            storeFile file('../../KeyStore.jks')
+            storePassword 'zhiqi_qwer@2017'
+        }
+    }
+
+    buildTypes {
+        /**
+         * 不同APP，不同buildType
+         */
+        debug {
+            debuggable true
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['debug']
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            matchingFallbacks = ['release']
+            applicationVariants.all { variant ->
+                def flavorName = "${variant.flavorName}"
+                def typeName = variant.buildType.name.toLowerCase()
+                if (typeName.endsWith('debug')) {
+//                    // debug环境
+//                    buildConfigField "String", "HOST", "\"http://dev.api.zhxyapp.com\""
+//                    buildConfigField "String", "OA_HOST", "\"http://dev.oa.zhxyapp.com\""
+                    // 生产环境
+//                    buildConfigField "String", "HOST", "\"http://api.cloupus.com\""
+//                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
+                    //本地环境
+                    buildConfigField "String", "HOST", "\"http://218.20.222.1:10083\""
+                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
+                } else if (flavorName.toLowerCase().endsWith("apptest")) {
+                    // 测试环境
+                    buildConfigField "String", "HOST", "\"http://qa.api.zhxyapp.com\""
+                    buildConfigField "String", "OA_HOST", "\"http://qa.oa.zhxyapp.com\""
+                } else {
+                    // 生产环境
+//                    buildConfigField "String", "HOST", "\"http://api.cloupus.com\""
+//                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
+                    buildConfigField "String", "HOST", "\"http://218.20.222.1:10083\""
+                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
+                }
+                variant.outputs.all { output ->
+                    // 输出apk名称为
+                    outputFileName = "${flavorName}_${variant.versionName}_${typeName}.apk"
+                    def fileFolder = "${getAppFromFlavor(flavorName, appInfos)}/${typeName}"
+                    def outputFile = output.outputFile.absolutePath
+                    assemble.doLast {
+                        copyFile(outputFile, fileFolder)
+                    }
+                }
+            }
+        }
+    }
+
+    flavorDimensions "app", "channel"
+
+    // 多渠道打包
+    productFlavors {
+        for (appInfo in appInfos) {
+            "${appInfo.appName}" {
+                dimension "app"
+                if (appInfo.appIdSuffix != null && appInfo.appIdSuffix.size() > 0) {
+                    applicationIdSuffix "${appInfo.appIdSuffix}"
+                }
+                sourceSets.getByName(name).setRoot("${appInfo.sourceRoot}")
+                manifestPlaceholders.putAll([
+                        JPUSH_PKGNAME: (applicationIdSuffix == null || applicationIdSuffix.size() <= 0) ? "${appId}" : "${appId}.${applicationIdSuffix}",
+                        JPUSH_APPKEY : "${appInfo.jpushAppKey}", //JPush上注册的包名对应的appkey.
+                ])
+            }
+        }
+        // 渠道
+        for (channel in channels) {
+            "${channel}" {
+                dimension "channel"
+                manifestPlaceholders.putAll([
+                        channel_value: name,
+                        JPUSH_CHANNEL: name
+                ])
+
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/greendao']
+        }
+    }
+
+    greendao {
+        schemaVersion gradle.dbSchemaVersion
+        daoPackage "com.zhiqi.campusassistant.dao"
+        targetGenDir 'src/main/greendao'
+    }
+}
+
+
+static def getAppFromFlavor(flavor, appInfos) {
+    for (appInfo in appInfos) {
+        if (flavor.startsWith(appInfo.appName)) {
+            return "${appInfo.appName}"
+        }
+    }
+}
+
+
+def copyFile(originFile, destPath) {
+    println("copy ${originFile} to $rootProject.projectDir/out/${destPath}")
+    copy {
+        from "$originFile"
+        into "$rootProject.projectDir/out/${destPath}"
+    }
+}
+
+clean.doLast {
+    project.delete "$rootProject.projectDir/out"
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':BaseLib')
+    compile project(':DialogLib')
+    compile project(':PhotoPicker')
+    compile project(':QRCode')
+    compile project(':PayLib')
+
+    // butterknife
+    compile "com.jakewharton:butterknife:${gradle.butterknifeVersion}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${gradle.butterknifeVersion}"
+
+    // Dagger
+    compile "com.google.dagger:dagger:${gradle.daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${gradle.daggerVersion}"
+    provided "javax.annotation:jsr250-api:${gradle.annotationVersion}"
+
+    // greenDao
+    compile "org.greenrobot:greendao:${gradle.greendaoVersion}"
+
+    // glide
+    compile "com.github.bumptech.glide:glide:${gradle.glideVersion}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${gradle.glideVersion}"
+    compile "com.github.bumptech.glide:okhttp3-integration:${gradle.glideVersion}"
+    compile("com.github.bumptech.glide:recyclerview-integration:${gradle.glideVersion}") {
+        // Excludes the support library because it's already included by Glide.
+        transitive = false
+    }
+
+    // circleImageView
+    compile "de.hdodenhof:circleimageview:${gradle.circleImageViewVersion}"
+
+    // JPush
+    compile "cn.jiguang.sdk:jpush:${gradle.jPushVersion}"
+    compile "cn.jiguang.sdk:jcore:${gradle.jCoreVersion}"
+
+    compile "com.android.support:multidex:${gradle.multiDex}"
+
+    // 高德地图
+    compile "com.amap.api:3dmap:${gradle.amap2dMap}"
+    compile "com.amap.api:location:${gradle.amapLocationVersion}"
+
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+}

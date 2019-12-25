@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion gradle.appCompileSdkVersion
+
+    defaultConfig {
+        minSdkVersion gradle.appMinSdkVersion
+        targetSdkVersion gradle.appTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:${gradle.supportLibraryVersion}"
+    compile "com.android.support:recyclerview-v7:${gradle.supportLibraryVersion}"
+    compile "com.android.support:design:${gradle.supportLibraryVersion}"
+    compile "com.android.support:cardview-v7:${gradle.supportLibraryVersion}"
+
+    // gson
+    compile "com.google.code.gson:gson:${gradle.gsonVersion}"
+
+    // rxAndroid
+    compile "io.reactivex.rxjava2:rxandroid:${gradle.rxAndroidVersion}"
+    compile "io.reactivex.rxjava2:rxjava:${gradle.rxJavaVersion}"
+
+    // Dagger
+    compile "com.google.dagger:dagger:${gradle.daggerVersion}"
+
+    // okhttp3
+    compile "com.squareup.okhttp3:okhttp:${gradle.okhttp3Version}"
+
+    // retrofit
+    compile "com.squareup.retrofit2:retrofit:${gradle.retrofitVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${gradle.retrofitVersion}"
+
+    // greenDao
+    compile "org.greenrobot:greendao:${gradle.greendaoVersion}"
+
+    // ObservableScrollview
+    /*compile "com.github.ksoichiro:android-observablescrollview:1.5.2"
+    compile "com.nineoldandroids:library:2.4.0"*/
+}

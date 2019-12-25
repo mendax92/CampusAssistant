@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/apply_detail_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_margin_s"
+                android:paddingRight="@dimen/common_margin_s">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/applicant_user"
+                    style="@style/Image.Circle"
+                    android:layout_marginRight="@dimen/common_margin_s"
+                    android:src="@drawable/img_user_default_square_head" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/applicant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_main_color"
+                        android:textSize="@dimen/common_text_n" />
+
+                    <TextView
+                        android:id="@+id/apply_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray_color"
+                        android:textSize="@dimen/common_text_xs" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/leave_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_text_n" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/leave_type"
+                style="@style/MainText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height_s"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/apply_detail_sub_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/common_margin_s"
+                    android:paddingRight="@dimen/common_margin_s">
+
+                    <TextView
+                        android:id="@+id/department_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray_xdark_color"
+                        android:textSize="@dimen/common_text_s" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_department"
+                        android:textColor="@color/text_gray_color"
+                        android:textSize="@dimen/common_text_xs" />
+                </LinearLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s"
+                    android:layout_marginRight="@dimen/common_margin_s" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/apply_detail_sub_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/common_margin_s"
+                    android:paddingRight="@dimen/common_margin_s">
+
+                    <TextView
+                        android:id="@+id/leave_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray_xdark_color"
+                        android:textSize="@dimen/common_text_s" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_date"
+                        android:textColor="@color/text_gray_color"
+                        android:textSize="@dimen/common_text_xs" />
+                </LinearLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s"
+                    android:layout_marginRight="@dimen/common_margin_s" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/apply_detail_sub_item"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/common_margin_xs"
+                    android:paddingLeft="@dimen/common_margin_s"
+                    android:paddingRight="@dimen/common_margin_s"
+                    android:paddingTop="@dimen/common_margin_xs">
+
+                    <TextView
+                        android:id="@+id/leave_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray_xdark_color"
+                        android:textSize="@dimen/common_text_s" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_reason"
+                        android:textColor="@color/text_gray_color"
+                        android:textSize="@dimen/common_text_xs" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/MainHorizontalLine" />
+
+            <FrameLayout
+                android:id="@+id/leave_img_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_pick_img_height"
+                android:background="@color/white">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/repair_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_choose_img_size"
+                    android:layout_gravity="center"
+                    android:overScrollMode="never" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/leave_img_line"
+                style="@style/MainHorizontalLine" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height_s"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin_s"
+                android:text="@string/leave_progress"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/common_text_s" />
+
+            <View style="@style/MainHorizontalLine" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/leave_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/windowBackground_sub"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/common_margin_s"
+                android:scrollbars="none" />
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginBottom="@dimen/common_margin_normal" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/leave_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_m"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/MainHorizontalLine" />
+
+        <com.ming.base.widget.listView.LinearListView
+            android:id="@+id/leave_action"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:divider="@drawable/common_divider"
+            android:dividerPadding="@dimen/common_margin_s"
+            android:orientation="horizontal"
+            android:showDividers="middle" />
+    </LinearLayout>
+
+</LinearLayout>

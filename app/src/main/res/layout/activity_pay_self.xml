@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_top_img_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_self_pay_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pay_waiting"
+            style="@style/MainItem"
+            android:layout_height="@dimen/common_item_height_m">
+
+            <ImageView
+                android:layout_width="@dimen/common_icon_size_s"
+                android:layout_height="@dimen/common_icon_size_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_pay_money" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_normal"
+                android:layout_weight="1"
+                android:text="@string/pay_wait_pay" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/MainHorizontalLine"
+            android:layout_marginLeft="@dimen/common_margin_s" />
+
+        <LinearLayout
+            android:id="@+id/pay_detail"
+            style="@style/MainItem"
+            android:layout_height="@dimen/common_item_height_m">
+
+            <ImageView
+                android:layout_width="@dimen/common_icon_size_s"
+                android:layout_height="@dimen/common_icon_size_s"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_pay_detail" />
+
+            <TextView
+                style="@style/MainText"
+                android:layout_marginLeft="@dimen/common_margin_normal"
+                android:layout_weight="1"
+                android:text="@string/pay_detail" />
+
+        </LinearLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+    </LinearLayout>
+
+</LinearLayout>

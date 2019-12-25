@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin_s"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/step_line_top"
+            android:layout_width="@dimen/common_line_size_m"
+            android:layout_height="@dimen/common_margin_s"
+            android:background="@color/common_line_color" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_header"
+            style="@style/Image.Circle"
+            android:src="@drawable/img_user_default_square_head" />
+
+
+        <com.ming.base.widget.CircleView
+            android:id="@+id/flow_circle"
+            android:layout_width="@dimen/flow_point_size"
+            android:layout_height="@dimen/flow_point_size"
+            android:layout_marginTop="@dimen/common_margin_xxs"
+            app:circle_color="@color/common_line_color" />
+
+        <View
+            android:id="@+id/step_line_bottom"
+            android:layout_width="@dimen/common_line_size_m"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/common_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin_s"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flow_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:textColor="@color/text_gray_dark_color"
+            android:textSize="@dimen/common_text_xs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_xs"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_flow_tree"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_margin_xs"
+            android:paddingLeft="@dimen/common_margin_normal"
+            android:paddingRight="@dimen/common_margin_s"
+            android:paddingTop="@dimen/common_margin_xs">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ming.base.widget.TextDrawableView
+                    android:id="@+id/flow_step_name"
+                    style="@style/MainText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/common_margin_xs"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    app:left_drawable_height="@dimen/flow_logo_size"
+                    app:left_drawable_width="@dimen/flow_logo_size" />
+
+                <TextView
+                    android:id="@+id/flow_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray_dark_color"
+                    android:textSize="@dimen/common_text_s" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray_xdark_color"
+                android:textSize="@dimen/common_text_xs" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

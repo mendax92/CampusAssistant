@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/spinner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_m"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/semester_year_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/semester_year"
+                style="@style/MainText" />
+
+            <ImageView
+                style="@style/MainSpinnerImg"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_toRightOf="@id/semester_year" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/common_line_size"
+            android:layout_height="@dimen/common_margin_normal"
+            android:background="@color/common_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/semester_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/common_content_selector"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/semester"
+                style="@style/MainText" />
+
+            <ImageView
+                style="@style/MainSpinnerImg"
+                android:layout_marginLeft="@dimen/common_margin_xs"
+                android:layout_toRightOf="@id/semester" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_s"
+        android:background="@color/scores_header_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_margin_s">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/scores_course_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:layout_width="@dimen/scores_score_width"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/scores_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_s" />
+
+        <TextView
+            android:layout_width="@dimen/scores_score_width"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/scores_credit_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_s" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

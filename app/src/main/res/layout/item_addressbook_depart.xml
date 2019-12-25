@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/common_content_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/department_logo"
+        style="@style/Image.Circle"
+        android:layout_width="@dimen/user_header_size"
+        android:layout_height="@dimen/user_header_size"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_school_logo" />
+
+    <TextView
+        android:id="@+id/department_name"
+        style="@style/MainText"
+        android:layout_marginLeft="@dimen/common_margin_s"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:orientation="vertical" />
+
+    <ImageView
+        style="@style/NextIcon"
+        android:layout_marginRight="@dimen/common_margin_normal" />
+</LinearLayout>

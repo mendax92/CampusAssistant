@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_input_search_height"
+    android:layout_marginRight="@dimen/common_margin_s"
+    android:background="@drawable/common_bg_search"
+    android:orientation="horizontal"
+    android:transitionName="search">
+
+    <com.ming.base.widget.ClearEditText
+        android:id="@+id/search_view"
+        style="@style/MainEditText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="@string/contacts_department_user"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/common_margin_xxs"
+        android:singleLine="true"
+        android:textSize="@dimen/common_text_s" />
+
+    <ImageView
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="7.5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_main_search" />
+
+</LinearLayout>

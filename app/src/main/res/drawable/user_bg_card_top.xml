@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/user_card_top_color" />
+    <corners
+        android:topLeftRadius="@dimen/user_card_radius"
+        android:topRightRadius="@dimen/user_card_radius" />
+</shape>

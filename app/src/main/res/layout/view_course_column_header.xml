@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/course_lesson"
+    android:layout_width="@dimen/course_list_header_column_width"
+    android:layout_height="@dimen/course_list_item_height"
+    android:background="@color/windowBackground"
+    android:gravity="center"
+    android:textColor="@color/text_main_color"
+    android:textSize="@dimen/common_text_s" />

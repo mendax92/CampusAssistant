@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/common_margin_xxs"
+            android:layout_marginTop="@dimen/common_margin_s"
+            android:text="@string/login_verify_code_has_send"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_xs" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/common_margin_s"
+            android:text="@string/login_phone_whole"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/common_text_n" />
+
+        <View style="@style/MainHorizontalLine" />
+
+        <RelativeLayout style="@style/MainInputWhole">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_centerVertical="true"
+                android:text="@string/login_verify_code" />
+
+            <ImageView
+                android:id="@+id/input_split"
+                style="@style/MainInputSplit" />
+
+            <com.ming.base.widget.ClearEditText
+                android:id="@+id/verify_number"
+                style="@style/MainInputEdit"
+                android:layout_alignParentRight="false"
+                android:layout_toLeftOf="@+id/verify_resend"
+                android:layout_toRightOf="@+id/input_split"
+                android:hint="@string/login_verify_code_hint"
+                android:inputType="number"
+                android:maxLength="6" />
+
+            <TextView
+                android:id="@+id/verify_resend"
+                style="@style/MainSmallButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:enabled="false"
+                android:gravity="center"
+                android:paddingLeft="@dimen/common_margin_xs"
+                android:text="@string/login_verify_resend" />
+
+        </RelativeLayout>
+
+        <View style="@style/MainHorizontalLine" />
+
+        <Button
+            android:id="@+id/verify_next"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_margin="@dimen/common_margin_normal"
+            android:enabled="false"
+            android:text="@string/common_next" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/has_question"
+        style="@style/MainText"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/common_margin_l"
+        android:text="@string/login_verify_has_question"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

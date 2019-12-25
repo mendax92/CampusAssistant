@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/md_content_padding_top"
+    android:paddingLeft="@dimen/md_dialog_frame_margin"
+    android:paddingRight="@dimen/md_dialog_frame_margin"
+    android:paddingTop="@dimen/md_content_padding_top">
+
+    <ProgressBar
+        android:id="@android:id/progress"
+        style="@style/Widget.MaterialProgressBar.ProgressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true" />
+
+    <ImageView
+        android:id="@+id/md_complete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/md_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="start"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/md_content_textsize"
+        tools:ignore="NewApi,RtlSymmetry,UnusedAttribute"
+        tools:text="Message" />
+
+</LinearLayout>

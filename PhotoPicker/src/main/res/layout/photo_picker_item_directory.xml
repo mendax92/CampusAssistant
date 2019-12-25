@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/photo_picker_item_directory_whole_height"
+    android:background="@drawable/photo_picker_bg_material_item"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/photo_picker_item_directory_padding_x"
+    android:paddingRight="@dimen/photo_picker_item_directory_padding_x"
+    android:paddingTop="@dimen/photo_picker_item_directory_padding">
+
+    <ImageView
+        android:id="@+id/iv_dir_cover"
+        android:layout_width="@dimen/photo_picker_item_directory_height"
+        android:layout_height="@dimen/photo_picker_item_directory_height"
+        android:layout_marginRight="@dimen/photo_picker_item_directory_padding_x"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_dir_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_picker_checkbox"
+        android:layout_toRightOf="@+id/iv_dir_cover"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/photo_picker_text_40"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_dir_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dir_name"
+        android:layout_toLeftOf="@+id/tv_picker_checkbox"
+        android:layout_toRightOf="@+id/iv_dir_cover"
+        android:textColor="@color/photo_picker_text_80"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/tv_picker_checkbox"
+        style="?attr/radioButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/photo_picker_item_directory_padding_x" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/photo_picker_item_line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/photo_picker_item_line" />
+</RelativeLayout>

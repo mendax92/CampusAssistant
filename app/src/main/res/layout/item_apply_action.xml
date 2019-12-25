@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <com.ming.base.widget.TextDrawableLayout
+        android:id="@+id/action_opera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_content_selector"
+        android:drawablePadding="@dimen/common_margin_xs"
+        android:gravity="center"
+        android:textColor="@color/text_main_color"
+        android:textSize="@dimen/common_text_n"
+        app:left_drawable_height="@dimen/common_ic_operate_size"
+        app:left_drawable_width="@dimen/common_ic_operate_size" />
+</FrameLayout>

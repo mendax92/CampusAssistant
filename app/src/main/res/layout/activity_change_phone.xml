@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/user_change_phone_img_width"
+        android:layout_height="@dimen/user_change_phone_img_height"
+        android:layout_marginBottom="@dimen/user_change_phone_margin_bottom"
+        android:layout_marginTop="@dimen/user_change_phone_margin"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_change_phone" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_change_phone_info"
+        android:textColor="@color/text_gray_xdark_color"
+        android:textSize="@dimen/common_text_n" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_s"
+        android:gravity="center"
+        android:text="@string/user_change_phone_tip" />
+
+
+    <Button
+        android:id="@+id/commit"
+        style="@style/MainButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_marginRight="@dimen/common_margin_normal"
+        android:layout_marginTop="@dimen/common_margin_normal"
+        android:text="@string/user_change_phone" />
+
+</LinearLayout>

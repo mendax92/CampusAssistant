@@ -1,0 +1,55 @@
+def initProjectVersionConstants() {
+    def versionPropsFile = file("version.properties")
+    Properties props = new Properties()
+    props.load(versionPropsFile.newDataInputStream())
+
+    // app
+    gradle.ext.appVersionName = props['APP_VERSION_NAME']
+    gradle.ext.appVersionCode = props['APP_VERSION_CODE'].toInteger()
+
+    // db schema
+    gradle.ext.dbSchemaVersion = props['APP_DB_SCHEMA_VERSION'].toInteger()
+    // build
+    gradle.ext.appCompileSdkVersion = props['ANDROID_COMPILE_SDK_VERSION'].toInteger()
+    gradle.ext.appToolsVersion = props['ANDROID_BUILD_TOOLS_VERSION']
+    gradle.ext.appTargetSdkVersion = props['ANDROID_BUILD_TARGET_SDK_VERSION'].toInteger()
+    gradle.ext.appMinSdkVersion = props['ANDROID_BUILD_MIN_SDK_VERSION'].toInteger()
+    // support lib
+    gradle.ext.supportLibraryVersion = props['ANDROID_SUPPORT_LIBRARY_VERSION']
+    // Dagger
+    gradle.ext.daggerVersion = props['DAGGER_VERSION']
+    gradle.ext.annotationVersion = props['ANNOTATION_VERSION']
+    // okhttp
+    gradle.ext.okhttp3Version = props['OKHTTP_VERSION']
+    // glide
+    gradle.ext.glideVersion = props['GLIDE_VERSION']
+    // retrofit
+    gradle.ext.retrofitVersion = props['RETROFIT_VERSION']
+    // Gson
+    gradle.ext.gsonVersion = props['GSON_VERSION']
+    // ButterKnife
+    gradle.ext.butterknifeVersion = props['BUTTERKNIFE_VERSION']
+    // greenDao
+    gradle.ext.greendaoVersion = props['GREENDAO_VERSION']
+    // RxAndroid
+    gradle.ext.rxAndroidVersion = props['RXANDROID_VERSION']
+    gradle.ext.rxJavaVersion = props['RXJAVA_VERSION']
+    // material
+    gradle.ext.materialVersion = props['MATERIAL_VERSION']
+    // circleImageView
+    gradle.ext.circleImageViewVersion = props['CIRCLE_IMAGEVIEW_VERSION']
+    // jPush
+    gradle.ext.jPushVersion = props['JPUSH_VERSION']
+    gradle.ext.jCoreVersion = props['JCORE_VERSION']
+    // zxing
+    gradle.ext.zxingVersion = props['ZXING_VERSION']
+    // mutildex
+    gradle.ext.multiDex = props['MULTIDEX_VERSION']
+    // AMap
+    gradle.ext.amap2dMap = props['AMAP_2DMAP_VERSION']
+    gradle.ext.amapLocationVersion = props['AMAP_LOCATION_VERSION']
+}
+
+initProjectVersionConstants()
+
+include ':app', ':BaseLib', ':DialogLib', ':PhotoPicker', ':PayLib', ':QRCode'

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+            <RelativeLayout style="@style/MainInputWhole">
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_centerVertical="true"
+                    android:text="@string/repair_contact_number" />
+
+                <ImageView
+                    android:id="@id/input_split"
+                    style="@style/MainInputSplit" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    style="@style/MainText"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/input_split"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/user_bind_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/lost_bind_phone"
+                    android:textColor="@color/text_link_color"
+                    android:textSize="@dimen/common_text_n" />
+
+            </RelativeLayout>
+
+            <View style="@style/MainHorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_xs"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/MainHorizontalLine" />
+
+                <RelativeLayout style="@style/MainInputWhole">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lost_apply_type_label" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <RadioGroup
+                        android:id="@+id/lost_apply_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/found"
+                            android:layout_width="@dimen/lost_apply_type_btn_width"
+                            android:layout_height="@dimen/lost_apply_type_btn_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/lost_type_left_btn_bg"
+                            android:button="@null"
+                            android:checked="true"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/lost_type_found"
+                            android:textColor="@color/lost_type_color"
+                            android:textSize="@dimen/common_text_n" />
+
+                        <View
+                            android:layout_width="@dimen/common_line_size_m"
+                            android:layout_height="@dimen/lost_apply_type_btn_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/text_link_color" />
+
+                        <RadioButton
+                            android:id="@+id/lost"
+                            android:layout_width="@dimen/lost_apply_type_btn_width"
+                            android:layout_height="@dimen/lost_apply_type_btn_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/lost_type_right_btn_bg"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/lost_type_lost"
+                            android:textColor="@color/lost_type_color"
+                            android:textSize="@dimen/common_text_n" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout
+                    android:id="@+id/lost_type_layout"
+                    style="@style/MainInputWhole"
+                    android:background="@drawable/common_content_selector">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lost_type_label" />
+
+                    <ImageView
+                        android:id="@+id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <TextView
+                        android:id="@+id/lost_type"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@+id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/apply_choice_hint" />
+
+
+                    <ImageView
+                        style="@style/NextIcon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout style="@style/MainInputWhole">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lost_card_no" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.ClearEditText
+                        android:id="@+id/card_no"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lost_card_no_hint"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/MainHorizontalLine"
+                    android:layout_marginLeft="@dimen/common_margin_s" />
+
+                <RelativeLayout
+                    style="@style/MainInputWhole"
+                    android:layout_height="@dimen/leave_details_height">
+
+                    <TextView
+                        style="@style/MainText"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lost_describe" />
+
+                    <ImageView
+                        android:id="@id/input_split"
+                        style="@style/MainInputSplit" />
+
+                    <com.ming.base.widget.AppEditText
+                        android:id="@+id/lost_describe"
+                        style="@style/MainInputEdit"
+                        android:layout_toRightOf="@id/input_split"
+                        android:gravity="center_vertical"
+                        android:hint="@string/lost_describe_hint"
+                        android:maxLength="200" />
+
+                </RelativeLayout>
+
+                <View style="@style/MainHorizontalLine" />
+            </LinearLayout>
+
+
+            <View
+                style="@style/MainHorizontalLine"
+                android:layout_marginTop="@dimen/common_margin_xs" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/leave_add_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_pick_img_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/common_margin_xs" />
+
+            <View style="@style/MainHorizontalLine" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View style="@style/MainHorizontalLine" />
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_marginBottom="@dimen/common_margin_xs"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_marginRight="@dimen/common_margin_normal"
+            android:layout_marginTop="@dimen/common_margin_xs"
+            android:enabled="false"
+            android:text="@string/common_submit" />
+    </LinearLayout>
+</LinearLayout>

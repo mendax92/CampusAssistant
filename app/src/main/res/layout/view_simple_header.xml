@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_item_height_l"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/common_margin_s"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_header"
+        style="@style/Image.Circle"
+        android:src="@drawable/img_user_default_square_head" />
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/MainText"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_toRightOf="@+id/user_header" />
+
+    <TextView
+        android:id="@+id/user_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_name"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_toRightOf="@+id/user_name"
+        android:textColor="@color/text_gray_xdark_color" />
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginLeft="@dimen/common_margin_normal"
+        android:layout_toRightOf="@+id/user_header"
+        android:textColor="@color/text_gray_dark_color" />
+
+
+</RelativeLayout>

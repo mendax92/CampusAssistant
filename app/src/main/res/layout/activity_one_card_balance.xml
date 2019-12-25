@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_xl"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_card_account_balance"
+            android:textColor="@color/common_main_text"
+            android:textSize="@dimen/common_text_s" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_xxs"
+            android:text="@string/one_card_account_balance"
+            android:textColor="@color/common_main_text"
+            android:textSize="@dimen/common_text_xxxl" />
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:id="@+id/pay_top_up_layout"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <ImageView
+            android:layout_width="@dimen/common_icon_size_s"
+            android:layout_height="@dimen/common_icon_size_s"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_card_top_up" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_weight="1"
+            android:text="@string/one_card_top_up" />
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/NextIcon"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+
+    <View
+        style="@style/MainHorizontalLine"
+        android:layout_marginTop="@dimen/common_margin_xs" />
+
+    <LinearLayout
+        android:id="@+id/order_detail_layout"
+        style="@style/MainItem"
+        android:layout_height="@dimen/common_item_height_m">
+
+        <ImageView
+            android:layout_width="@dimen/common_icon_size_s"
+            android:layout_height="@dimen/common_icon_size_s"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_card_detail" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/MainText"
+            android:layout_marginLeft="@dimen/common_margin_normal"
+            android:layout_weight="1"
+            android:text="@string/one_card_detail" />
+
+        <ImageView
+            style="@style/NextIcon"
+            android:layout_marginLeft="@dimen/common_margin_s"
+            android:layout_marginRight="@dimen/common_margin_s" />
+
+    </LinearLayout>
+
+    <View style="@style/MainHorizontalLine" />
+</LinearLayout>

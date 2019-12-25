@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="photo_picker_pager_bg">#262626</color>
+    <color name="photo_picker_popup_window_bg">#AA000000</color>
+    <color name="photo_picker_selected_bg">#44000000</color>
+    <color name="photo_picker_black_40">#282828</color>
+    <color name="photo_picker_common_primary">#f3f3f3</color>
+
+    <color name="photo_picker_done_color">#00990f</color>
+    <color name="photo_picker_done_disable_color">#00660a</color>
+    <color name="photo_picker_text_40">#4A4A4A</color>
+    <color name="photo_picker_text_80">#979797</color>
+    <color name="photo_picker_text_120">#787878</color>
+    <color name="photo_picker_item_photo_border_selected">#00990f</color>
+    <color name="photo_picker_item_photo_border_n">#33ffffff</color>
+    <color name="photo_picker_item_line">#dedede</color>
+
+</resources>

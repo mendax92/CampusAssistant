@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_item_height_m"
+    android:background="@drawable/common_content_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_margin_s"
+    android:paddingRight="@dimen/common_margin_s">
+
+    <TextView
+        android:id="@+id/pay_title"
+        style="@style/MainText"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/pay_money"
+        style="@style/MainText" />
+
+    <ImageView
+        style="@style/NextIcon"
+        android:layout_marginLeft="@dimen/common_margin_normal" />
+
+</LinearLayout>

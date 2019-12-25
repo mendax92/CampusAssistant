@@ -1,0 +1,322 @@
+<resources>
+
+    <style name="BaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:listDivider">@drawable/common_divider</item>
+        <!-- Dialog-->
+        <item name="md_dark_theme">false</item>
+        <!-- actionBar-->
+        <item name="actionBarTheme">@style/AppTheme.MainActionBar</item>
+        <item name="actionBarSize">@dimen/actionbar_height</item>
+        <item name="titleTextStyle">@style/AppTheme.ActionbarTextStyle</item>
+        <item name="actionMenuTextColor">@color/common_menu_color</item>
+        <item name="android:radioButtonStyle">@style/AppTheme.RadioButton</item>
+        <!-- dialog -->
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert</item>
+        <item name="android:windowAnimationStyle">@style/AppTheme.AnimationActivity</item>
+    </style>
+
+    <style name="AppTheme.AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseTheme" />
+
+    <style name="AppTheme.Closer">
+        <item name="android:homeAsUpIndicator">@drawable/common_ic_closer</item>
+    </style>
+
+    <style name="TranslucentTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/img_launch_bg</item>
+    </style>
+
+    <style name="AppTheme.Navigation">
+        <item name="android:windowBackground">@drawable/launch_bg_img</item>
+    </style>
+
+    <style name="AppTheme.SmallMenu">
+        <item name="actionMenuTextAppearance">@style/AppTheme.SmallActionBarMenu</item>
+    </style>
+
+    <style name="AppTheme.MainActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:actionBarSize">@dimen/actionbar_height</item>
+        <item name="actionButtonStyle">@style/MainActionButton</item>
+        <item name="actionOverflowMenuStyle">@style/MainOverflowMenu</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionbarTextStyle</item>
+        <item name="android:actionMenuTextColor">@color/common_menu_color</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/common_text_l</item>
+    </style>
+
+    <style name="MainActionButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">@dimen/common_button_menu_size</item>
+        <item name="android:minHeight">@dimen/common_button_menu_size</item>
+        <item name="android:padding">0dip</item>
+    </style>
+
+    <style name="MainOverflowMenu" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/colorPrimary</item>
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!-- action bar title text -->
+    <style name="AppTheme.ActionbarTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/actionbar_text</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.SmallActionBarMenu">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/common_text_s</item>
+    </style>
+
+    <style name="MainTabBaseStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/common_text_xs</item>
+        <item name="android:textColor">@color/main_tab_bottom_text</item>
+        <item name="android:button">@null</item>
+        <item name="top_drawable_height">@dimen/main_tab_icon_size</item>
+        <item name="top_drawable_width">@dimen/main_tab_icon_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <!-- main tab -->
+    <style name="MainTabStyle" parent="MainTabBaseStyle" />
+
+    <style name="MainText">
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/common_text_n</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MainEditText" parent="MainText">
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">@dimen/common_margin_xxs</item>
+        <item name="edit_clear_icon">@drawable/ic_txt_clear</item>
+        <item name="edit_clear_icon_height">@dimen/common_icon_hint_size</item>
+        <item name="edit_clear_icon_width">@dimen/common_icon_hint_size</item>
+    </style>
+
+    <style name="MainSearchView" parent="@style/Widget.AppCompat.SearchView">
+        <item name="iconifiedByDefault">false</item>
+        <item name="searchIcon">@drawable/ic_main_search</item>
+        <item name="showDividers">none</item>
+        <item name="queryBackground">@null</item>
+        <item name="closeIcon">@drawable/ic_txt_clear</item>
+        <item name="android:imeOptions">actionSearch</item>
+    </style>
+
+    <style name="MainAutoCompleteView" parent="@style/Widget.AppCompat.AutoCompleteTextView">
+        <item name="editTextColor">@color/text_main_color</item>
+        <item name="android:editTextColor">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/common_text_s</item>
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="MainButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/common_text_m</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/common_btn_blue</item>
+    </style>
+
+    <style name="MainSmallButton">
+        <item name="android:textColor">@color/common_small_button_text</item>
+        <item name="android:textSize">@dimen/common_text_n</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="MainInputWhole">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_input_height</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">@dimen/common_margin_s</item>
+        <item name="android:paddingRight">@dimen/common_margin_s</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MainIconSplit">
+        <item name="android:layout_width">@dimen/common_input_split_width</item>
+        <item name="android:layout_height">@dimen/common_input_split_height</item>
+        <item name="android:src">@drawable/ic_line_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="MainInputSplit" parent="MainIconSplit">
+        <item name="android:layout_marginLeft">@dimen/common_input_split_margin_left</item>
+    </style>
+
+    <style name="MainInputEdit" parent="MainEditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/common_margin_normal</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="MainInputPassword" parent="MainInputEdit">
+        <item name="android:digits">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">@dimen/common_radio_btn_size</item>
+        <item name="android:layout_height">@dimen/common_radio_btn_size</item>
+        <item name="android:background">@drawable/common_btn_radio</item>
+    </style>
+
+    <style name="AppTheme.RadioDrawableView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/common_margin_s</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/common_text_n</item>
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/common_btn_radio</item>
+        <item name="left_drawable_height">@dimen/common_radio_btn_size</item>
+        <item name="left_drawable_width">@dimen/common_radio_btn_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="MainItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_item_height</item>
+        <item name="android:background">@drawable/common_content_selector</item>
+        <item name="android:paddingLeft">@dimen/common_margin_s</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MainHorizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_line_size</item>
+        <item name="android:background">@color/common_line_color</item>
+    </style>
+
+    <style name="MainHorizontalDashLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_line_size</item>
+        <item name="dashGap">@dimen/common_line_size_m</item>
+        <item name="dashWidth">@dimen/common_line_size_l</item>
+        <item name="dashHeight">@dimen/common_line_size</item>
+        <item name="dashOrientation">horizontal</item>
+        <item name="dashColor">@color/common_line_color</item>
+    </style>
+
+    <style name="MainVerticalDashLine">
+        <item name="android:layout_width">@dimen/common_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="dashGap">@dimen/common_line_size_m</item>
+        <item name="dashWidth">@dimen/common_line_size_l</item>
+        <item name="dashHeight">@dimen/common_line_size</item>
+        <item name="dashOrientation">vertical</item>
+        <item name="dashColor">@color/common_line_color</item>
+    </style>
+
+    <style name="NextIcon">
+        <item name="android:layout_width">@dimen/common_ic_next_width</item>
+        <item name="android:layout_height">@dimen/common_ic_next_height</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/ic_next</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+
+    <style name="DateTimePicker" parent="Theme.AppCompat.Light">
+        <item name="picker_divider_color">@color/colorAccent</item>
+        <item name="picker_divider_height">@dimen/common_line_size_m</item>
+        <item name="android:editTextStyle">@style/Widget.EditText.White</item>
+    </style>
+
+    <style name="Widget.EditText.White" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">@dimen/common_text_n</item>
+    </style>
+
+    <style name="Image">
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="Image.Circle">
+        <item name="android:layout_height">@dimen/common_circle_image_size</item>
+        <item name="android:layout_width">@dimen/common_circle_image_size</item>
+        <item name="civ_border_width">@dimen/common_line_size</item>
+        <item name="civ_border_color">@color/common_line_color</item>
+    </style>
+
+    <style name="TabLayoutText">
+        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textSize">@dimen/common_text_n</item>
+    </style>
+
+    <style name="TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_tablayout_height</item>
+        <item name="tabSelectedTextColor">@color/text_blue_color</item>
+        <item name="tabTextColor">@color/text_main_color</item>
+        <item name="tabIndicatorColor">@color/text_blue_color</item>
+        <item name="tabBackground">@color/transparent</item>
+        <item name="tabTextAppearance">@style/TabLayoutText</item>
+        <item name="tabIndicatorHeight">@dimen/common_line_size_m</item>
+        <item name="tabPadding">0dp</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="AppTheme.ToggleCheckBox">
+        <item name="android:layout_width">@dimen/common_button_toggle_width</item>
+        <item name="android:layout_height">@dimen/common_button_toggle_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:button">@drawable/common_toggle_btn</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="MainSpinnerImg">
+        <item name="android:layout_width">@dimen/common_spinner_size</item>
+        <item name="android:layout_height">@dimen/common_spinner_size</item>
+        <item name="android:src">@drawable/ic_spinner</item>
+    </style>
+</resources>
