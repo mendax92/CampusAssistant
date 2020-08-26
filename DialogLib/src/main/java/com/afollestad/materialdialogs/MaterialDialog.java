@@ -705,7 +705,6 @@ public class MaterialDialog extends DialogBase implements
         }
 
         private String parseContent(CharSequence content) {
-
             if (!TextUtils.isEmpty(content)) {
                 content = content.toString().replace("\\n", "<br>");
                 return content.toString();
