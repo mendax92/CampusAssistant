@@ -96,10 +96,10 @@ android {
                     buildConfigField "String", "OA_HOST", "\"http://qa.oa.zhxyapp.com\""
                 } else {
                     // 生产环境
-//                    buildConfigField "String", "HOST", "\"http://api.cloupus.com\""
-//                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
-                    buildConfigField "String", "HOST", "\"http://218.20.222.1:10083\""
+                    buildConfigField "String", "HOST", "\"http://api.cloupus.com\""
                     buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
+//                    buildConfigField "String", "HOST", "\"http://218.20.222.1:10083\""
+//                    buildConfigField "String", "OA_HOST", "\"http://oa.zhxyapp.com\""
                 }
                 variant.outputs.all { output ->
                     // 输出apk名称为

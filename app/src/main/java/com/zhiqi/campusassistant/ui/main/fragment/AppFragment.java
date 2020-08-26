@@ -184,7 +184,7 @@ public class AppFragment extends BaseLoadListFragment<ModuleCategory> implements
         WXLaunchMiniProgram.Req req = new WXLaunchMiniProgram.Req();
         req.userName = AppConfigs.APP_ORIGINAL_ID_WECHAT_APPLETS; // 填小程序原始id
         req.path = path;
-        req.miniprogramType = WXLaunchMiniProgram.Req.MINIPROGRAM_TYPE_PREVIEW;// 可选打开 开发版，体验版和正式版
+        req.miniprogramType = WXLaunchMiniProgram.Req.MINIPTOGRAM_TYPE_RELEASE;// 可选打开 开发版，体验版和正式版
 //        req.miniprogramType = WXLaunchMiniProgram.Req.MINIPROGRAM_TYPE_TEST;// 可选打开 开发版，体验版和正式版
 //        req.miniprogramType = WXLaunchMiniProgram.Req.MINIPTOGRAM_TYPE_RELEASE;// 可选打开 开发版，体验版和正式版
         api.sendReq(req);

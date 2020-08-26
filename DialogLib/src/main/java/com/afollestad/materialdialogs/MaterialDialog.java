@@ -49,6 +49,7 @@ import com.afollestad.materialdialogs.internal.MDTintHelper;
 import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import com.afollestad.materialdialogs.util.DialogUtils;
 import com.afollestad.materialdialogs.util.RippleHelper;
+import com.afollestad.materialdialogs.util.StringUtil;
 import com.afollestad.materialdialogs.util.TypefaceHelper;
 
 import java.text.NumberFormat;
@@ -692,20 +693,29 @@ public class MaterialDialog extends DialogBase implements
         }
 
         public Builder content(@StringRes int contentRes) {
-            content(Html.fromHtml(this.context.getString(contentRes)));
+            content(this.context.getString(contentRes));
             return this;
         }
 
         public Builder content(@NonNull CharSequence content) {
             if (this.customView != null)
                 throw new IllegalStateException("You cannot set content() when you're using a custom view.");
-            this.content = content;
+            this.content = Html.fromHtml(parseContent(content));
             return this;
+        }
+
+        private String parseContent(CharSequence content) {
+            if (!TextUtils.isEmpty(content)) {
+                content = content.toString().replace("\\n", "<br>");
+                return content.toString();
+            } else {
+                return "";
+            }
         }
 
         public Builder content(@StringRes int contentRes, Object... formatArgs) {
             String str = String.format(this.context.getString(contentRes), formatArgs);
-            content(Html.fromHtml(str));
+            content(str);
             return this;
         }
 
